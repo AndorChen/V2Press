@@ -187,7 +187,11 @@ msgstr "未找到"
 
 #: inc/custom-post.php:46
 msgid "%s ago"
-msgstr "%s 之前"
+msgstr "%s之前"
+
+#: inc/custom-post.php:119 inc/custom-template-tags.php:91
+msgid "Create New Topic"
+msgstr "创建新话题"
 
 #: inc/custom-post.php:143
 msgid "Select Node"
