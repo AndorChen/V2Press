@@ -6,7 +6,7 @@
  * @since 0.0.1
  */
 function vp_theme_options_menu() {
-  add_theme_page( 'V2Press Options', 'V2Press Options', 'administrator', 'v2press-options', 'vp_theme_options_page' );
+  add_theme_page( __( 'V2Press Options', 'v2press' ), __( 'V2Press Options', 'v2press' ), 'administrator', 'v2press-options', 'vp_theme_options_page' );
 }
 add_action( 'admin_menu', 'vp_theme_options_menu' );
 
