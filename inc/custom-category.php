@@ -56,7 +56,7 @@ function vp_taxonomy_edit_meta_field($term) {
 	</th>
 	<td>
 		<input type="text" name="category_meta[vp_category_logo_url]" id="category_meta[vp_category_logo_url]" value="<?php echo esc_attr( $term_meta['vp_category_logo_url'] ) ? esc_attr( $term_meta['vp_category_logo_url'] ) : ''; ?>">
-		<p class="description"><?php _e( 'The category logo will display in the category show page. Please use absolute url to the image. And the image size is 72x72px.', 'v2press' ); ?></p>
+		<p class="description"><?php _e( 'The category logo will display in the category show page. You should upload logo image into V2Press\'s images/logo directory, and enter the image name only. The image size is 72x72px.', 'v2press' ); ?></p>
 	</td>
 </tr>
 <tr class="form-field">
@@ -226,7 +226,7 @@ function vp_update_section_option( $sec, $cat_id ) {
 function vp_node_navi() {
   $sections = vp_load_sections();
   if ( !$sections ) {
-    echo '<p class="xlarge fade center">' . __( 'Have no sections yet.' ,'v2press' ) . '</p>';
+    echo '<p class="inner xlarge fade center">' . __( 'Have no sections yet.' ,'v2press' ) . '</p>';
     return;
   }
     

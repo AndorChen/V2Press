@@ -8,18 +8,23 @@ define( 'VP_LIBS_PATH', get_stylesheet_directory() . '/libs' );
  * Load extra functions in.
  *
  */
-include( VP_INCLUDE_PATH . '/custom-hooks.php' );
-include( VP_INCLUDE_PATH . '/custom-options.php' );
-include( VP_INCLUDE_PATH . '/custom-template-tags.php' );
-include( VP_INCLUDE_PATH . '/custom-category.php' );
-include( VP_INCLUDE_PATH . '/member.php' );
-include( VP_INCLUDE_PATH . '/favorite.php' );
-include( VP_INCLUDE_PATH . '/custom-page.php' );
-include( VP_INCLUDE_PATH . '/custom-comment.php' );
-include( VP_INCLUDE_PATH . '/custom-post.php' );
-include( VP_INCLUDE_PATH . '/custom-user.php' );
-include( VP_INCLUDE_PATH . '/theme-options.php' );
-include( VP_INCLUDE_PATH . '/seo.php' );
+$includes = array(
+  'custom-hooks',
+  'custom-options',
+  'custom-template-tags',
+  'custom-category',
+  'member',
+  'favorite',
+  'custom-page',
+  'custom-comment',
+  'custom-post',
+  'custom-user',
+  'theme-options',
+  'seo'
+  );
+foreach ( $includes as $include ) {
+  include( VP_INCLUDE_PATH . '/' . $include . '.php' );
+}
 
 /**
  * V2Press activation.
