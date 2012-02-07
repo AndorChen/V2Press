@@ -504,6 +504,19 @@ msgstr "请使用一个不同于当前密码的新密码"
 msgid "Forgot password?"
 msgstr "忘记密码？"
 
+#: inc/notifications.php:23
+msgid "No notifications yet."
+msgstr "没有提醒"
+
+#: inc/notifications.php:41
+msgid "%1$s mentioned you when reply %2$s at %3$s"
+msgstr "%1$s 在回复 %2$s 时提到了你 %3$s"
+
+#: inc/notifications.php:43
+msgctxt "notification"
+msgid "delete"
+msgstr "删除"
+
 #: inc/theme-options.php:22
 msgid "V2Press Options"
 msgstr "V2Press 设置"
@@ -613,6 +626,12 @@ msgstr[1] "<span>%d</span> 话题收藏"
 #: sidebar.php:10
 msgid "<span>%d</span> Following"
 msgstr "<span>%d</span> 特别关注"
+
+#: sidebar.php:15
+msgid "%d notification"
+msgid_plural "%d notifications"
+msgstr[0] "%d条未读提醒"
+msgstr[1] "%d条未读提醒"
 
 #: sidebar.php:23
 msgid "Already signup? %s"

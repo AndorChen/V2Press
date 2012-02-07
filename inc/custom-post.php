@@ -4,7 +4,7 @@
  *
  * @since 0.0.1
  */
- 
+
 /* =============================================================================
  * Post related custom template tags.
  *
@@ -12,15 +12,22 @@
  ============================================================================ */
 
 /**
- * Retrieve the post author's avatar link to profile page, must use within the loop.
+ * Display the post author's avatar link to profile page, must use within the loop.
  *
  * @since 0.0.1
+ */
+function vp_the_author_profile_link() {
+  echo vp_get_the_author_profile_link();
+}
+/**
+ * Retrieve the post author's avatar link to profile page, must use within the loop.
  *
- * @param bool $display If display or return the output. Default is display.
+ * @since 0.0.2
+ *
  * @use vp_user_profile_link()
  */
-function vp_the_author_profile_link( $display = true ) {
-  return vp_user_profile_link( get_the_author_meta( 'id' ), $display );
+function vp_get_the_author_profile_link() {
+  return vp_get_user_profile_link( get_the_author_meta( 'id' ) );
 }
 
 /**
@@ -61,21 +68,21 @@ function vp_posts_fields( $query ) {
   global $wpdb;
   return( $query .", IF( $wpdb->comments.comment_date, MAX( $wpdb->comments.comment_date ), $wpdb->posts.post_date ) AS last_comment_date " );
 }
- 
+
 function vp_posts_join( $query ) {
   global $wpdb;
   return( $query ." LEFT JOIN $wpdb->comments ON $wpdb->comments.comment_post_id = $wpdb->posts.ID " );
 }
- 
+
 function vp_posts_groupby( $query ) {
   global $wpdb;
   return( " $wpdb->posts.ID ". $query );
 }
- 
+
 function vp_posts_orderby( $query ) {
   return( ' last_comment_date DESC, '. $query );
 }
- 
+
 function vp_pre_get_posts( $query ) {
   if( is_home() || is_front_page() ){
     add_filter( 'posts_fields', 'vp_posts_fields', 7 );
@@ -105,22 +112,22 @@ add_action( 'pre_get_posts', 'vp_pre_get_posts' );
 function vp_new_topic_link( $text = '', $before = '', $after = '') {
   if ( !is_user_logged_in() )
     return;
-  
+
   global $wp_query;
   $node_id = $wp_query->get_queried_object_id();
-  
+
   if ( is_category() ) {
     $url = vp_get_page_url_by_slug( 'new', 'node=' . $node_id );
   } else {
     $url = vp_get_page_url_by_slug( 'new' );
   }
-  
+
   if ( '' == $text ) {
     $text = __( 'Create New Topic', 'v2press' );
   }
-  
+
   $link = $before . '<a rel="nofollow" class="btn" href="' . $url . '">' . $text . '</a>' . $after;
-  
+
   echo $link;
 }
 
@@ -131,7 +138,7 @@ function vp_new_topic_link( $text = '', $before = '', $after = '') {
  */
 function vp_new_topic_form() {
   ob_start();
-  
+
   vp_error_messages();
 ?>
 <form id="vp-new-topic" action="" method="post">
@@ -180,12 +187,12 @@ function vp_do_create_new_topic() {
     $title = $_POST['topic_title'];
     $content_filtered = $_POST['topic_content_filtered'];
     $user_id = get_current_user_id();
-    
+
     // Node empty
     if ( empty( $node_id ) || ( 0 == $node_id ) ) {
       vp_errors()->add( 'node_empty', __( 'Please select a node', 'v2press' ) );
     }
-    
+
     // Node id invalid
     if ( !empty( $node_id ) ) {
       $node = get_term_by( 'id', $node_id, 'category');
@@ -193,17 +200,17 @@ function vp_do_create_new_topic() {
         vp_errors()->add( 'node_invalid', 'Please do not cheating me.', 'v2press' );
       }
     }
-    
+
     // Title empty
     if ( empty( $title ) ) {
       vp_errors()->add( 'topic_title_empty', __( 'Please enter the topic title', 'v2press' ) );
     }
-    
+
     // Content empty
     if ( empty( $content_filtered ) ) {
       vp_errors()->add( 'topic_content_empty', __( 'Please write something useful', 'v2press' ) );
     }
-    
+
     $errors = vp_errors()->get_error_messages();
     if( empty( $errors ) ) {
       $data = array(
@@ -215,9 +222,9 @@ function vp_do_create_new_topic() {
       );
       require_once( VP_LIBS_PATH . '/markdown-extra.php');
       $data['post_content'] = Markdown( $content_filtered );
-      
+
       $topic = wp_insert_post( $data );
-      
+
       if ( $topic ) {
         $topic_url = get_permalink( $topic );
         wp_redirect( $topic_url );
@@ -241,22 +248,22 @@ add_action( 'template_redirect', 'vp_do_create_new_topic' );
  */
 function vp_edit_topic_links() {
   $topic_id = get_the_ID();
-  
+
   if ( !is_user_logged_in() || !current_user_can( 'edit_post', $topic_id ) )
     return;
-  
+
   $pub_time = get_the_time( 'U' );
   $time_diff = abs( current_time( 'timestamp' ) - $pub_time );
-  
+
   // Cannot edit topic 15mins after created
   if ( 900 < $time_diff )
     return;
-  
+
   $edit_url = add_query_arg( 'edit', 'true', get_permalink() );
   $link = '<span class="topic-edit">';
   $link .= '<a rel="nofollow" href="' . $edit_url . '">' . __( 'edit', 'v2press' ) . '</a>';
   $link .= '</span>';
-  
+
   echo $link;
 }
 
@@ -281,7 +288,7 @@ function vp_is_edit() {
  */
 function vp_edit_topic_form() {
   $pub_time = get_the_time( 'U' );
-  $time_diff = abs( current_time( 'timestamp' ) - $pub_time );  
+  $time_diff = abs( current_time( 'timestamp' ) - $pub_time );
   // Cannot edit topic 15mins after created
   if ( 900 < $time_diff ) {
     echo '<p>' . __( 'You cannot edt this topic 15 minites after created.', 'v2press' ) . '</p>';
@@ -291,7 +298,7 @@ function vp_edit_topic_form() {
   ob_start();
   $topic_id = get_query_var( 'p' );
   $topic = get_post( $topic_id );
-  
+
   vp_error_messages();
 ?>
 <form id="vp-edit-topic" action="" method="post">
@@ -326,17 +333,17 @@ function vp_do_edit_topic() {
     $topic_id = get_query_var( 'p' );
     $title = $_POST['topic_title'];
     $content_filtered = $_POST['topic_content_filtered'];
-    
+
     // Title empty
     if ( empty( $title ) ) {
       vp_errors()->add( 'topic_title_empty', __( 'Please enter the topic title', 'v2press' ) );
     }
-    
+
     // Content empty
     if ( empty( $content_filtered ) ) {
       vp_errors()->add( 'topic_content_empty', __( 'Please write something useful', 'v2press' ) );
     }
-    
+
     $errors = vp_errors()->get_error_messages();
     if( empty( $errors ) ) {
       $data = array(
@@ -344,12 +351,12 @@ function vp_do_edit_topic() {
         'post_title' => $title,
         'post_content_filtered' => $content_filtered,
       );
-      
+
       require_once( VP_LIBS_PATH . '/markdown-extra.php' );
       $data['post_content'] = Markdown( $content_filtered );
-      
+
       $topic = wp_update_post( $data );
-      
+
       if ( $topic ) {
         $topic_url = get_permalink( $topic );
         wp_redirect( $topic_url );

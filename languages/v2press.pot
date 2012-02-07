@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v2press\n"
-"POT-Creation-Date: 2012-02-05 04:18:45+00:00\n"
+"POT-Creation-Date: 2012-02-07 15:28:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -74,7 +74,7 @@ msgstr ""
 msgid "All rights reserved."
 msgstr ""
 
-#: functions.php:56
+#: functions.php:69
 msgid "Footer Navigation"
 msgstr ""
 
@@ -83,11 +83,11 @@ msgctxt "menu"
 msgid "Home"
 msgstr ""
 
-#: header.php:39 inc/member.php:323 sidebar.php:23
+#: header.php:39 inc/member.php:323 sidebar.php:26
 msgid "Signin"
 msgstr ""
 
-#: header.php:40 sidebar.php:22
+#: header.php:40 sidebar.php:25
 msgid "Signup"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Logo URL"
 msgstr ""
 
-#: inc/custom-category.php:24
+#: inc/custom-category.php:24 inc/custom-category.php:59
 msgid ""
 "The category logo will display in the category show page. You should upload "
 "logo image into V2Press's images/logo directory, and enter the image name "
@@ -148,12 +148,6 @@ msgstr ""
 
 #: inc/custom-category.php:34 inc/custom-category.php:77
 msgid "Please select what section this category belongs to."
-msgstr ""
-
-#: inc/custom-category.php:59
-msgid ""
-"The category logo will display in the category show page. Please use "
-"absolute url to the image. And the image size is 72x72px."
 msgstr ""
 
 #: inc/custom-category.php:178
@@ -190,73 +184,73 @@ msgstr ""
 msgid "Not Found"
 msgstr ""
 
-#: inc/custom-post.php:46
+#: inc/custom-post.php:53
 msgid "%s ago"
 msgstr ""
 
-#: inc/custom-post.php:119 inc/custom-template-tags.php:91
+#: inc/custom-post.php:126 inc/custom-template-tags.php:95
 msgid "Create New Topic"
 msgstr ""
 
-#: inc/custom-post.php:143
+#: inc/custom-post.php:150
 msgid "Select Node"
 msgstr ""
 
-#: inc/custom-post.php:149
+#: inc/custom-post.php:156
 msgid "Topic title here"
 msgstr ""
 
-#: inc/custom-post.php:157
+#: inc/custom-post.php:164
 msgid "Create Topic"
 msgstr ""
 
-#: inc/custom-post.php:186
+#: inc/custom-post.php:193
 msgid "Please select a node"
 msgstr ""
 
-#: inc/custom-post.php:199 inc/custom-post.php:332
+#: inc/custom-post.php:206 inc/custom-post.php:339
 msgid "Please enter the topic title"
 msgstr ""
 
-#: inc/custom-post.php:204 inc/custom-post.php:337
+#: inc/custom-post.php:211 inc/custom-post.php:344
 msgid "Please write something useful"
 msgstr ""
 
-#: inc/custom-post.php:257
+#: inc/custom-post.php:264
 msgid "edit"
 msgstr ""
 
-#: inc/custom-post.php:287
+#: inc/custom-post.php:294
 msgid "You cannot edt this topic 15 minites after created."
 msgstr ""
 
-#: inc/custom-post.php:308
+#: inc/custom-post.php:315
 msgid "Submit Changes"
 msgstr ""
 
-#: inc/custom-template-tags.php:35
+#: inc/custom-template-tags.php:39
 msgid "Page"
 msgstr ""
 
-#: inc/custom-template-tags.php:95
+#: inc/custom-template-tags.php:99
 msgid "Edit \"%s\""
 msgstr ""
 
-#: inc/custom-template-tags.php:102
+#: inc/custom-template-tags.php:106
 msgid "Search results for \"%s\""
 msgstr ""
 
-#: inc/custom-template-tags.php:127
+#: inc/custom-template-tags.php:131
 msgid "%d topic"
 msgid_plural "%d topics"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/custom-template-tags.php:128
+#: inc/custom-template-tags.php:132
 msgid "&laquo; Previous"
 msgstr ""
 
-#: inc/custom-template-tags.php:129
+#: inc/custom-template-tags.php:133
 msgid "Next &raquo;"
 msgstr ""
 
@@ -521,7 +515,20 @@ msgstr ""
 msgid "Forgot password?"
 msgstr ""
 
-#: inc/theme-options.php:22
+#: inc/notifications.php:23
+msgid "No notifications yet."
+msgstr ""
+
+#: inc/notifications.php:41
+msgid "%1$s mentioned you when reply %2$s at %3$s"
+msgstr ""
+
+#: inc/notifications.php:43
+msgctxt "notification"
+msgid "delete"
+msgstr ""
+
+#: inc/theme-options.php:9 inc/theme-options.php:22
 msgid "V2Press Options"
 msgstr ""
 
@@ -635,7 +642,13 @@ msgstr[1] ""
 msgid "<span>%d</span> Following"
 msgstr ""
 
-#: sidebar.php:23
+#: sidebar.php:15
+msgid "%d notification"
+msgid_plural "%d notifications"
+msgstr[0] ""
+msgstr[1] ""
+
+#: sidebar.php:26
 msgid "Already signup? %s"
 msgstr ""
 

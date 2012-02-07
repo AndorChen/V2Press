@@ -1,6 +1,6 @@
 <?php
 
-define( 'VP_VERSION', '0.0.1' );
+define( 'VP_VERSION', '0.0.2' );
 define( 'VP_INCLUDE_PATH', get_stylesheet_directory() . '/inc' );
 define( 'VP_LIBS_PATH', get_stylesheet_directory() . '/libs' );
 
@@ -20,7 +20,8 @@ $includes = array(
   'custom-post',
   'custom-user',
   'theme-options',
-  'seo'
+  'seo',
+  'notifications'
   );
 foreach ( $includes as $include ) {
   include( VP_INCLUDE_PATH . '/' . $include . '.php' );
@@ -39,9 +40,16 @@ function vp_active() {
 }
 vp_activation_hook( 'vp_active' );
 
+/**
+ * Run when V2Press first activation or when we need update.
+ *
+ * @since 0.0.1
+ */
 function vp_activation_hook( $function ) {
-  $option_name = 'v2press_installed';
-  if ( !get_option( $option_name ) ) {
+  $installed = get_option( 'v2press_installed' );
+  $version = get_option( 'v2press_version' );
+
+  if ( !$installed || ( VP_VERSION != $version ) ) {
     call_user_func( $function );
     update_option( $option_name, '1' );
   }

@@ -374,14 +374,15 @@ td { vertical-align: top; }
 .topic-edit {
   font-size: 10px;
 }
-.node-link a, .cat-item a {
+.node-link a, .cat-item a, a.notification-delete {
   background: #f5f5f5;
   border-radius: 3px;
   color: #999;
   padding: 2px 3px;
 }
 .node-link a:hover, .node-link a:active,
-.cat-item a:hover, .cat-item a:active {
+.cat-item a:hover, .cat-item a:active,
+a.notification-delete:hover, a.notification-delete:active{
   background: #e2e2e2;
   color: #777;
 }
@@ -601,6 +602,34 @@ td { vertical-align: top; }
 /* Following Page */
 #following-page-box .avatar {
   margin: 0 10px 10px 0;
+}
+
+/* Notifications Page */
+.notifications-list {
+  list-style-type: none;
+}
+.notification-item {
+  color: #999;
+  padding: 0 50px 0 34px;
+  position: relative;
+}
+.notification-item .avatar {
+  float: left;
+  margin-left: -34px;
+}
+.notification-content {
+  background: #f5f5f5;
+  border-radius: 3px;
+  color: #222;
+  margin: 5px 0 15px;
+  padding: 3px 5px;
+}
+a.notification-delete {
+  font-size: 10px;
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
 

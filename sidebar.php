@@ -11,6 +11,9 @@
         </ul>
       </div>
     </div>
+    <div class="footing">
+      <p class="xsmall fade"><a href="<?php echo vp_get_page_url_by_slug( 'notifications' ); ?>"><?php printf( _n( '%d notification', '%d notifications', vp_unread_notifications_count(), 'v2press' ), vp_unread_notifications_count() ); ?></a></p>
+    </div>
     <?php else : ?>
     <div class="heading">
       <p><strong><?php bloginfo( 'name' ); ?></strong></p>
@@ -24,7 +27,7 @@
     </div>
     <?php endif; // END if is_user_logged_in() ?>
   </div>
-  
+
   <?php
     if ( is_home() ) {
       get_template_part( 'sidebar', 'home' );
