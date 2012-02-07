@@ -56,7 +56,7 @@ function vp_activation_hook( $function ) {
 function vp_theme_setup() {
   // i18n
   load_theme_textdomain( 'v2press', get_template_directory() . '/languages' );
-  
+
   // Register navigation menus
   register_nav_menu( 'footer', __( 'Footer Navigation', 'v2press' ) );
 }
@@ -68,7 +68,7 @@ add_action( 'after_setup_theme', 'vp_theme_setup' );
  * @since 0.0.1
  */
 function vp_enqueue_scripts(){
-  wp_enqueue_script('html5placeholder', get_bloginfo('template_url').'/js/jquery.html5.placeholder.js', array('jquery'), '1.0.1', true);
+  wp_enqueue_script( 'html5placeholder', get_bloginfo('template_url').'/js/jquery.html5.placeholder.js', array('jquery'), '1.0.1', true );
 }
 add_action('wp_enqueue_scripts', 'vp_enqueue_scripts');
 
@@ -79,7 +79,7 @@ add_action('wp_enqueue_scripts', 'vp_enqueue_scripts');
  */
 if ( !is_admin() )
   show_admin_bar(false);
-  
+
 /**
  * Prevent none administrator user from admin area.
  *
