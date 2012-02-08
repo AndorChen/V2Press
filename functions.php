@@ -36,7 +36,6 @@ foreach ( $includes as $include ) {
 function vp_active() {
   vp_init_options();
   vp_init_pages();
-  update_option( 'v2press_version', VP_VERSION );
 }
 vp_activation_hook( 'vp_active' );
 
@@ -51,7 +50,8 @@ function vp_activation_hook( $function ) {
 
   if ( !$installed || ( VP_VERSION != $version ) ) {
     call_user_func( $function );
-    update_option( $option_name, '1' );
+    update_option( $installed, '1' );
+    update_option( 'v2press_version', VP_VERSION );
   }
 }
 
