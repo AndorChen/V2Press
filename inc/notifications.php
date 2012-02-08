@@ -12,11 +12,11 @@
  */
 function vp_notifications_list() {
   $user_id = get_current_user_id();
-  $notifications = get_user_meta( $user_id, 'v2press_notifications', true );
-  if ( '0' == $notifications )
+  $notifications = (array) get_user_meta( $user_id, 'v2press_notifications', true );
+  if ( '' == $notifications[0] )
     $notifications = array();
 
-  do_action( 'vp_notifications' );
+  $notifications = array_reverse( $notifications );
 
   $output = '';
   if ( empty( $notifications ) ) {
@@ -73,8 +73,10 @@ function vp_push_notify( $comment_ID ) {
     $notifications = array();
 
   $notifications[] = $comment_ID;
-  $count = count( $notifications );
   update_user_meta( $parent_user_id, 'v2press_notifications', $notifications );
+
+  $count = (int) get_user_meta( $parent_user_id, 'v2press_notifications_unread', true );
+  $count++;
   update_user_meta( $parent_user_id, 'v2press_notifications_unread', $count );
 }
 add_action( 'comment_post', 'vp_push_notify' );
@@ -111,8 +113,6 @@ add_action( 'template_redirect', 'vp_delete_notification' );
  */
 function vp_unread_notifications_count() {
   $count = (int) get_user_meta( get_current_user_id(), 'v2press_notifications_unread', true );
-  if ( empty( $count ) )
-    $count = 0;
 
   return $count;
 }

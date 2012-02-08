@@ -15,16 +15,16 @@
  */
 function vp_filter_comments_count( $count ) {
 	global $id;
-	
+
 	$comments = get_approved_comments( $id );
 	$comment_count = 0;
-	
+
 	foreach ( $comments as $comment ) {
 		if ( $comment->comment_type == "" ) {
 			$comment_count++;
 		}
 	}
-	
+
 	return $comment_count;
 }
 add_filter( 'get_comments_number', 'vp_filter_comments_count', 0 );
@@ -43,7 +43,7 @@ function vp_comments_list( $comment, $args, $depth ) {
 		case 'pingback' :
 		case 'trackback' :
 			break;
-		
+
 		default :
 	?>
 	<li <?php comment_class( 'inner' ); ?> id="li-comment-<?php comment_ID(); ?>">
@@ -52,7 +52,7 @@ function vp_comments_list( $comment, $args, $depth ) {
 				<div class="comment-author vcard">
 					<?php vp_user_avatar_link( 48, $comment->user_id ); ?>
 					<span class="fn"><?php vp_user_profile_link( $comment->user_id ); ?></span>
-					<?php if ( is_user_logged_in() && comments_open() ) { vp_comment_reply_link(); } ?>	
+					<?php if ( is_user_logged_in() && comments_open() ) { vp_comment_reply_link(); } ?>
 					<?php printf( '<time class="comment-datetime" pubdate datetime="%1$s">%2$s</time>',
 								get_comment_time('c'), get_comment_time('Y-n-j @ g:i a') );
 					?>
@@ -67,7 +67,7 @@ function vp_comments_list( $comment, $args, $depth ) {
 			  <?php endif; ?>
 			  <?php comment_text(); ?>
 			</div>
-			
+
 		</article>
 	</li>
 	<?php
@@ -86,15 +86,44 @@ function vp_comment_reply_link( $args = array(), $comment = null ) {
     'after' => '</div>',
     'reply_text' => __( 'Reply', 'v2press' )
   );
-  
+
   $args = wp_parse_args( $args, $defaults );
   extract( $args, EXTR_SKIP );
-  
+
   $comment = get_comment($comment);
-    
+
   $link = '<img class="comment-reply-link" src="' . get_stylesheet_directory_uri() . '/images/reply.png" onclick="replyTo(' . $comment->comment_ID . ');return false;" />';
-  
+
   echo $link;
+}
+
+/**
+ * Filter comment text to display @mention link.
+ *
+ * @since 0.0.2
+ */
+function vp_mention_link( $content ) {
+  $content = preg_replace_callback('/(@)([a-zA-z0-9_\-]+)/', '_vp_mention_link_cb', $content );
+  return $content;
+}
+add_filter( 'comment_text', 'vp_mention_link', 999 );
+
+/**
+ * Return the mentioned user link.
+ *
+ * @since 0.0.2
+ * @for vp_mention_link()
+ */
+function _vp_mention_link_cb( $matches ) {
+  $user_login = $matches[2];
+  $user = get_user_by( 'login', $user_login );
+  if ( !$user )
+    return;
+
+  $url = get_author_posts_url( $user->ID );
+  $link = '<a href="' . $url . '">@' . $user_login . '</a>';
+
+  return $link;
 }
 
 /**
