@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v2press\n"
-"POT-Creation-Date: 2012-02-07 15:28:42+00:00\n"
+"POT-Creation-Date: 2012-02-10 15:01:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -150,12 +150,16 @@ msgstr ""
 msgid "Please select what section this category belongs to."
 msgstr ""
 
-#: inc/custom-category.php:178
+#: inc/custom-category.php:177
 msgid "None"
 msgstr ""
 
-#: inc/custom-category.php:229
-msgid "Have no sections yet."
+#: inc/custom-category.php:228
+msgid "No sections yet."
+msgstr ""
+
+#: inc/custom-category.php:238
+msgid "No nodes yet."
 msgstr ""
 
 #: inc/custom-comment.php:66
@@ -166,15 +170,15 @@ msgstr ""
 msgid "Reply"
 msgstr ""
 
-#: inc/custom-comment.php:123
+#: inc/custom-comment.php:152
 msgid "Add a reply"
 msgstr ""
 
-#: inc/custom-comment.php:132
+#: inc/custom-comment.php:161
 msgid "Add Reply"
 msgstr ""
 
-#: inc/custom-comment.php:140
+#: inc/custom-comment.php:169
 msgid ""
 "Please avoid posting pointless replies, it's always great to save everyone's "
 "precious time."
@@ -528,36 +532,56 @@ msgctxt "notification"
 msgid "delete"
 msgstr ""
 
-#: inc/theme-options.php:9 inc/theme-options.php:22
+#: inc/theme-options.php:23
+msgid "General Settings"
+msgstr ""
+
+#: inc/theme-options.php:24
+msgid "Webmaster Tools Settings"
+msgstr ""
+
+#: inc/theme-options.php:40 inc/theme-options.php:91
 msgid "V2Press Options"
 msgstr ""
 
-#: inc/theme-options.php:25
-msgid "Settings saved."
+#: inc/theme-options.php:55
+msgid "Default Field"
 msgstr ""
 
-#: inc/theme-options.php:33
+#: inc/theme-options.php:56
+msgid "This is a default description."
+msgstr ""
+
+#: inc/theme-options.php:94
+msgid "Theme options updated."
+msgstr ""
+
+#: inc/theme-options.php:110
 msgid "Save Changes"
 msgstr ""
 
-#: inc/theme-options.php:46
-msgid "Node Sections"
+#: inc/theme-options.php:271
+msgid "Feed URL"
 msgstr ""
 
-#: inc/theme-options.php:47
+#: inc/theme-options.php:272
+msgid "Enter the alternate feed url."
+msgstr ""
+
+#: inc/theme-options.php:279
 msgid "Section Names"
 msgstr ""
 
-#: inc/theme-options.php:57
-msgid "Set what section a regular category belongs to."
-msgstr ""
-
-#: inc/theme-options.php:69
+#: inc/theme-options.php:280
 msgid "Please enter section names, delimited with commas(,)."
 msgstr ""
 
-#: page-bookmarks.php:34
-msgid "Permalink to %s"
+#: inc/theme-options.php:288
+msgid "Google Webmaster Verfify"
+msgstr ""
+
+#: inc/theme-options.php:289
+msgid "Enter the meta tag value gives in the Webmaster Verify Ownership step."
 msgstr ""
 
 #: page-bookmarks.php:39

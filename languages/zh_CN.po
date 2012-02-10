@@ -156,8 +156,12 @@ msgid "None"
 msgstr "未分区"
 
 #: inc/custom-category.php:224
-msgid "Have no sections yet."
-msgstr "还未建立任何节点区域。"
+msgid "No sections yet."
+msgstr "还未建立任何节点区域"
+
+#: inc/custom-category.php:238
+msgid "No nodes yet."
+msgstr "本区域还没有节点"
 
 #: inc/custom-comment.php:64
 msgid "Your reply is awaiting moderation."
@@ -517,33 +521,57 @@ msgctxt "notification"
 msgid "delete"
 msgstr "删除"
 
-#: inc/theme-options.php:22
+#: inc/theme-options.php:23
+msgid "General Settings"
+msgstr "一般设置"
+
+#: inc/theme-options.php:24
+msgid "Webmaster Tools Settings"
+msgstr "站长工具设置"
+
+#: inc/theme-options.php:40 inc/theme-options.php:91
 msgid "V2Press Options"
 msgstr "V2Press 设置"
 
-#: inc/theme-options.php:25
-msgid "Settings saved."
-msgstr "设置已保存。"
+#: inc/theme-options.php:55
+msgid "Default Field"
+msgstr "默认项"
 
-#: inc/theme-options.php:33
+#: inc/theme-options.php:56
+msgid "This is a default description."
+msgstr "这是一个默认的描述。"
+
+#: inc/theme-options.php:94
+msgid "Theme options updated."
+msgstr "主题设置已更新。"
+
+#: inc/theme-options.php:110
 msgid "Save Changes"
 msgstr "保存修改"
 
-#: inc/theme-options.php:46
-msgid "Node Sections"
-msgstr "节点区域"
+#: inc/theme-options.php:271
+msgid "Feed URL"
+msgstr "Feed 地址"
 
-#: inc/theme-options.php:47
+#: inc/theme-options.php:272
+msgid "Enter the alternate feed url."
+msgstr "如果不想使用默认的 Feed 地址请输入其他的地址，例如 Feedburner。"
+
+#: inc/theme-options.php:279
 msgid "Section Names"
 msgstr "区域名称"
 
-#: inc/theme-options.php:57
-msgid "Set what section a regular category belongs to."
-msgstr "将分类置于区域之下。"
-
-#: inc/theme-options.php:69
+#: inc/theme-options.php:280
 msgid "Please enter section names, delimited with commas(,)."
 msgstr "请输入区域名称，使用英文逗号（,）分隔。"
+
+#: inc/theme-options.php:288
+msgid "Google Webmaster Verfify"
+msgstr "Google 网站管理员验证码"
+
+#: inc/theme-options.php:289
+msgid "Enter the meta tag value gives in the Webmaster Verify Ownership step."
+msgstr "填入验证网络管理员一步中 Google 提供的 mata 值。"
 
 #: page-bookmarks.php:39
 msgid "You have not bookmarke any topics yet."

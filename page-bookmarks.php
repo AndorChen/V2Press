@@ -31,7 +31,7 @@ get_header(); ?>
           ?>
             <ul class="zebra-topics-list">
               <?php while ( $bm_query->have_posts() ) : $bm_query->the_post(); $i++; ?>
-              <li id="topic-<?php the_ID(); ?>"<?php if ( 0 == $i%2) echo ' class="alt"'; ?>><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'v2press' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></li>
+              <li id="topic-<?php the_ID(); ?>"<?php if ( 0 == $i%2) echo ' class="alt"'; ?>><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></li>
               <?php endwhile; ?>
             </ul>
             <?php endif; // END if $bm_query->have_posts() ?>
