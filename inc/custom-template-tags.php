@@ -135,3 +135,19 @@ function vp_page_navi() {
 
   echo $output;
 }
+
+/**
+ * Display the feed url in head.
+ *
+ * You can setting feed url with feedburner or else, otherwise the WordPress default one will used.
+ *
+ * @since 0.0.2
+ */
+function vp_feed_link() {
+	$feed = vp_get_theme_option( 'feed_url' );
+
+	if ( !$feed )
+		$feed = get_feed_link();
+		
+	echo '<link rel="alternate" type="application/rss+xml" title="' . get_bloginfo( 'name' ) . ' Latest Topic Feed" href="' . $feed . '" />';
+}

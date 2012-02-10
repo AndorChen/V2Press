@@ -8,8 +8,8 @@
   <link rel="shortcut icon" href="<?php bloginfo( 'template_url' ); ?>/images/favicon.ico" />
   <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>?ver=0.0.1" media="all" />
   
-  <link rel="alternate" type="application/rss+xml" title="V2Press Latest Topic Feed" href="http://feeds.feedburner.com/xxx" />
-  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+  <?php vp_feed_link(); ?>
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     
   <!--[if lt IE 9]>
   <script src="<?php echo get_bloginfo( 'template_url' ); ?>/js/html5.js"></script>

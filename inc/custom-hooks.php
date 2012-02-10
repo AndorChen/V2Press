@@ -23,7 +23,7 @@ add_filter('get_comment_text',    'Markdown', 6);
 add_filter('get_comment_excerpt', 'Markdown', 6);
 
 /* =============================================================================
- * Not need these in head.
+ * Do not need these in head.
  *
  * @since 0.0.1
  ============================================================================ */

@@ -35,11 +35,11 @@ function vp_noindex_predefined_pages() {
   }
 }
 
-/* =============================================================================
+/**
  * Add trailing slash to everthing except single topic page url.
  *
  * @since 0.0.1
- ============================================================================ */
+ */
 function vp_add_trailingslash( $url, $type ) {
 	if ( 'single' === $type ) {
 		return $url;
@@ -49,12 +49,11 @@ function vp_add_trailingslash( $url, $type ) {
 }
 add_filter( 'user_trailingslashit', 'vp_add_trailingslash', 10, 2 );
 
-
-/* =============================================================================
+/**
  * Redirect some archive pages to home.
  *
  * @since 0.0.1
- ============================================================================ */
+ */
 function vp_archive_redirect() {
   global $wp_query;
   if ( $wp_query->is_date ) {
@@ -65,22 +64,22 @@ function vp_archive_redirect() {
 add_action( 'wp', 'vp_archive_redirect' );
 
 
-/* =============================================================================
+/**
  * Not follow the comments popup link.
  *
  * @since 0.0.1
- ============================================================================ */
+ */
 function vp_echo_nofollow() {
   echo ' rel="nofollow"';
 }
 add_filter( 'comments_popup_link_attributes', 'vp_echo_nofollow' );
 
 
-/* =============================================================================
+/**
  * Add description meta data to head
  *
  * @since 0.0.1
- ============================================================================ */
+ */
 function vp_description() {
   $desc = '';
   
@@ -101,3 +100,18 @@ function vp_description() {
   echo '<meta name="description" content="' . $desc . '" />' . "\n";
 }
 add_action( 'wp_head', 'vp_description' );
+
+/**
+ * Add Google Webmaster verification code to head if needed.
+ *
+ * @since 0.0.2
+ */
+function vp_verify_google_webmaster() {
+	$verify = vp_get_theme_option( 'google-webmaster-verify' );
+	
+	if ( !$verify )
+		return;
+	
+	echo $verify;
+}
+add_action( 'wp_head', 'vp_verify_google_webmaster' );
