@@ -147,14 +147,13 @@ function vp_get_category_meta( $meta='' ) {
  ============================================================================ */
 
 /**
- * Load the sections from sections.yml file.
+ * Load the sections from theme options.
  *
  * @since 0.0.1
  * @for vp_node_navi()
  */
 function vp_load_sections() {
-  $options = get_option( 'theme_v2press_options' );
-  $sections = $options['sections-list'];
+  $sections = vp_get_theme_option( 'sections' );
   if ( !$sections ) {
     $sections = array();
   } else {
@@ -226,16 +225,21 @@ function vp_update_section_option( $sec, $cat_id ) {
 function vp_node_navi() {
   $sections = vp_load_sections();
   if ( !$sections ) {
-    echo '<p class="inner xlarge fade center">' . __( 'Have no sections yet.' ,'v2press' ) . '</p>';
+    echo '<p class="inner xlarge fade center">' . __( 'No sections yet.' ,'v2press' ) . '</p>';
     return;
   }
     
   $output = '<ul class="node-navi-list">';
   foreach ( $sections as $sec ) {
-    $output .= '<li class="node-navi-section"><h3 class="node-navi-section-title">' . $sec . '</h3><ul class="node-navi-nodes">';
+    $output .= '<li class="node-navi-section"><h3 class="node-navi-section-title">' . $sec . '</h3>';
     
-    $cats = (array) get_option( "v2press_section_$sec" );
-    
+    $cats = get_option( "v2press_section_$sec" );
+		if ( empty( $cats ) ) {
+			$output .= '<p class="fade center">' . __( 'No nodes yet.', 'v2press' ) . '</p>';
+			continue;
+		}
+		
+    $output .= '<ul class="node-navi-nodes">';
     foreach ($cats as $cat ) {
       $node = get_term( $cat, 'category' );
       if ( !$node )
