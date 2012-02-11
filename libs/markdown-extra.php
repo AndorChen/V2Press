@@ -1380,14 +1380,16 @@ class Markdown_Parser {
 		return $text;
 	}
 
-
+	/**
+	 * Hacked by Andor
+	 * Autolinks donot need '<' and '>' delimiters.
+	 */
 	function doAutoLinks($text) {
-		$text = preg_replace_callback('{<((https?|ftp|dict):[^\'">\s]+)>}i',
+		$text = preg_replace_callback('{((https?|ftp|dict):[^\'">\s]+)}i',
 			array(&$this, '_doAutoLinks_url_callback'), $text);
 
-		# Email addresses: <address@domain.foo>
+		# Email addresses: address@domain.foo
 		$text = preg_replace_callback('{
-			<
 			(?:mailto:)?
 			(
 				(?:
@@ -1402,7 +1404,6 @@ class Markdown_Parser {
 					\[[\d.a-fA-F:]+\]	# IPv4 & IPv6
 				)
 			)
-			>
 			}xi',
 			array(&$this, '_doAutoLinks_email_callback'), $text);
 
@@ -2481,9 +2482,11 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 	#
 	# Adding the fenced code block syntax to regular Markdown:
 	#
-	# ~~~
+	# Hacked by Andor: changed delimiters from ~~~ to ```
+	# 
+	# ```
 	# Code block
-	# ~~~
+	# ```
 	#
 		$less_than_tab = $this->tab_width;
 
@@ -2491,7 +2494,7 @@ class MarkdownExtra_Parser extends Markdown_Parser {
 				(?:\n|\A)
 				# 1: Opening marker
 				(
-					~{3,} # Marker: three tilde or more.
+					`{3,} # Marker: three tilde or more.
 				)
 				[ ]* \n # Whitespace and newline following marker.
 

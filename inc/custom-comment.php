@@ -106,7 +106,7 @@ function vp_mention_link( $content ) {
   $content = preg_replace_callback('/(@)([a-zA-z0-9_\-]+)/', '_vp_mention_link_cb', $content );
   return $content;
 }
-add_filter( 'comment_text', 'vp_mention_link', 999 );
+add_filter( 'pre_comment_content', 'vp_mention_link', 999 );
 
 /**
  * Return the mentioned user link.
