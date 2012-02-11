@@ -76,10 +76,10 @@ if (!isset($wp_version)) {
 	# - Add paragraph tag around the excerpt, but remove it for the excerpt rss.
 	if (MARKDOWN_WP_POSTS) {
 		remove_filter('the_content',     'wpautop');
-        remove_filter('the_content_rss', 'wpautop');
+    remove_filter('the_content_rss', 'wpautop');
 		remove_filter('the_excerpt',     'wpautop');
 		add_filter('the_content',     'mdwp_MarkdownPost', 6);
-        add_filter('the_content_rss', 'mdwp_MarkdownPost', 6);
+    add_filter('the_content_rss', 'mdwp_MarkdownPost', 6);
 		add_filter('get_the_excerpt', 'mdwp_MarkdownPost', 6);
 		add_filter('get_the_excerpt', 'trim', 7);
 		add_filter('the_excerpt',     'mdwp_add_p');

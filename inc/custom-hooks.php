@@ -14,13 +14,18 @@
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_content', 'convert_smilies' );
 remove_filter( 'the_content_rss', 'wpautop' );
+remove_filter( 'content_save_pre',  'balanceTags', 50 );
+remove_filter( 'excerpt_save_pre',  'balanceTags', 50 );
+add_filter( 'the_content',  	  'balanceTags', 50 );
+add_filter( 'get_the_excerpt', 'balanceTags', 9 );
 
 require_once( VP_LIBS_PATH . '/markdown-extra.php' );
-remove_filter('comment_text', 'wpautop', 30);
-remove_filter('comment_text', 'make_clickable');
-add_filter('pre_comment_content', 'Markdown', 6);
-add_filter('get_comment_text',    'Markdown', 6);
-add_filter('get_comment_excerpt', 'Markdown', 6);
+remove_filter( 'comment_text', 'wpautop', 30 );
+remove_filter( 'comment_text', 'make_clickable', 9 );
+remove_filter( 'comment_text', 'convert_smilies', 20 );
+add_filter( 'pre_comment_content', 'Markdown', 6 );
+add_filter( 'get_comment_text',    'Markdown', 6 );
+add_filter( 'get_comment_excerpt', 'Markdown', 6 );
 
 /* =============================================================================
  * Do not need these in head.
