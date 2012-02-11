@@ -233,7 +233,7 @@ class V2Press_Options {
 				break;
 			
 			case 'textarea':
-				echo '<textarea class="' . $field_class . '" id="' . $id . '" name="' . self::OPTION_NAME . '[' . $id . ']" placeholder="' . $std . '" rows="5" cols="30">' . wp_htmledit_pre( $options[$id] ) . '</textarea>';
+				echo '<textarea class="' . $field_class . '" id="' . $id . '" name="' . self::OPTION_NAME . '[' . $id . ']" placeholder="' . $std . '" rows="5" cols="40">' . wp_htmledit_pre( $options[$id] ) . '</textarea>';
 				
 				if ( $desc != '' )
 					echo '<br /><span class="description">' . $desc . '</span>';
@@ -387,9 +387,67 @@ class V2Press_Options {
 	*
 	* @since 0.0.2
 	*/
-	public function styles() {		
-		wp_register_style( self::PAGE_NAME, get_bloginfo( 'stylesheet_directory' ) . '/css/v2press-options.css' );
-		wp_enqueue_style( self::PAGE_NAME );		
+	public function styles() {
+?>		
+<style type="text/css">
+.ui-tabs-nav {
+	border-bottom: 1px solid #ccc;
+	height: 27px;
+	margin: 20px 0;
+	padding: 0;
+}
+.ui-tabs-nav li {
+	display: block;
+	float: left;
+	margin: 0;
+}
+.ui-tabs-nav li a {
+	padding: 4px 20px 6px;
+	font-weight: bold;
+}
+.ui-tabs-nav li a {
+	border-style: solid;
+	border-color: #ccc #ccc #f9f9f9;
+	border-width: 1px 1px 0;
+	color: #c1c1c1;
+	text-shadow: rgba(255, 255, 255, 1) 0 1px 0;
+	display: inline-block;
+	padding: 4px 14px 6px;
+	text-decoration: none;
+	margin: 0 6px -1px 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-khtml-border-top-left-radius: 5px;
+	-khtml-border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.ui-tabs-nav li.ui-tabs-selected a,
+.ui-tabs-nav li.ui-state-active a {
+	border-width: 1px;
+	color: #464646;
+}
+.ui-tabs-panel {
+	clear: both;
+}
+.ui-tabs-panel h3 {
+	font: italic normal normal 20px Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
+	margin: 0;
+	padding: 0 0 5px;
+	line-height: 35px;
+	text-shadow: 0 1px 0 #fff;
+}
+.ui-tabs-panel h4 {
+	font-size: 15px;
+	font-weight: bold;
+	margin: 1em 0;
+}
+.wrap h3, .wrap table {
+	display: none;
+}
+</style>
+<?php	
 	}
 	
 	/**
