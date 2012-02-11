@@ -22,6 +22,8 @@
     </div>
   </footer><!--END #footer-->
   
+  <?php get_template_part( 'content', 'markdown-helper' ); ?>
+  
   <?php wp_footer(); ?>
 </body>
 </html>

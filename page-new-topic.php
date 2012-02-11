@@ -24,6 +24,9 @@ get_header(); ?>
           <div class="inner">
             <?php vp_new_topic_form(); ?>
           </div>
+          <div class="footing">
+            <p class="xsmall fade"><?php _e( 'You can press <kbd>M</kbd> to popup the Markdown syntax cheatsheet.', 'v2press' ); ?></p>
+          </div>
         </section>
       </div><!--END #main-->
       

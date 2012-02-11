@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v2press\n"
-"POT-Creation-Date: 2012-02-10 15:01:27+00:00\n"
+"POT-Creation-Date: 2012-02-11 14:05:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,6 +48,65 @@ msgstr ""
 
 #: comments.php:48
 msgid "You need %1$ssignin%2$s to add replies."
+msgstr ""
+
+#: content-markdown-helper.php:2
+msgctxt "markdown"
+msgid "Markdown Cheatsheet"
+msgstr ""
+
+#: content-markdown-helper.php:6
+msgctxt "markdown"
+msgid "Paragraph"
+msgstr ""
+
+#: content-markdown-helper.php:11
+msgctxt "markdown"
+msgid "Headers"
+msgstr ""
+
+#: content-markdown-helper.php:16
+msgctxt "markdown"
+msgid "Text styles"
+msgstr ""
+
+#: content-markdown-helper.php:27
+msgctxt "markdown"
+msgid "Unordered List"
+msgstr ""
+
+#: content-markdown-helper.php:33
+msgctxt "markdown"
+msgid "Ordered List"
+msgstr ""
+
+#: content-markdown-helper.php:40
+msgctxt "markdown"
+msgid "Images"
+msgstr ""
+
+#: content-markdown-helper.php:43
+msgctxt "markdown"
+msgid "Links"
+msgstr ""
+
+#: content-markdown-helper.php:49
+msgctxt "markdown"
+msgid "Blockquotes"
+msgstr ""
+
+#: content-markdown-helper.php:55
+msgctxt "markdown"
+msgid "Code Block"
+msgstr ""
+
+#: content-markdown-helper.php:64
+msgctxt "markdown"
+msgid "Inline code"
+msgstr ""
+
+#: content-markdown-helper.php:70
+msgid "For more syntax references, please visit %1$sMarkdown Syntax%2$s"
 msgstr ""
 
 #: content-single.php:18
@@ -600,6 +659,10 @@ msgstr ""
 
 #: page-following.php:36
 msgid "%d following in total."
+msgstr ""
+
+#: page-new-topic.php:28
+msgid "You can press <kbd>M</kbd> to popup the Markdown syntax cheatsheet."
 msgstr ""
 
 #: page-planes.php:16

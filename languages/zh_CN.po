@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http:/v2press.com\n"
-"POT-Creation-Date: 2012-02-03 07:52:49+00:00\n"
+"POT-Creation-Date: 2012-02-11 14:05:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,6 +50,65 @@ msgstr "回复功能关闭"
 #: comments.php:48
 msgid "You need %1$ssignin%2$s to add replies."
 msgstr "需要%1$s登录%2$s才可以添加回复。"
+
+#: content-markdown-helper.php:2
+msgctxt "markdown"
+msgid "Markdown Cheatsheet"
+msgstr "Markdown 语法速查表"
+
+#: content-markdown-helper.php:6
+msgctxt "markdown"
+msgid "Paragraph"
+msgstr "段落"
+
+#: content-markdown-helper.php:11
+msgctxt "markdown"
+msgid "Headers"
+msgstr "标题"
+
+#: content-markdown-helper.php:16
+msgctxt "markdown"
+msgid "Text styles"
+msgstr "文本样式"
+
+#: content-markdown-helper.php:27
+msgctxt "markdown"
+msgid "Unordered List"
+msgstr "无序列表"
+
+#: content-markdown-helper.php:33
+msgctxt "markdown"
+msgid "Ordered List"
+msgstr "有序列表"
+
+#: content-markdown-helper.php:40
+msgctxt "markdown"
+msgid "Images"
+msgstr "图片"
+
+#: content-markdown-helper.php:43
+msgctxt "markdown"
+msgid "Links"
+msgstr "链接"
+
+#: content-markdown-helper.php:49
+msgctxt "markdown"
+msgid "Blockquotes"
+msgstr "引用"
+
+#: content-markdown-helper.php:55
+msgctxt "markdown"
+msgid "Code Block"
+msgstr "代码块"
+
+#: content-markdown-helper.php:64
+msgctxt "markdown"
+msgid "Inline code"
+msgstr "行间代码"
+
+#: content-markdown-helper.php:70
+msgid "For more syntax references, please visit %1$sMarkdown Syntax%2$s"
+msgstr "更多的语法介绍，请访问 %1$sMarkdown Syntax%2$s"
 
 #: content-single.php:18
 msgid "By %1$s at %2$s"
@@ -590,6 +649,10 @@ msgstr "你还未关注任何用户呢。"
 #: page-following.php:36
 msgid "%d following in total."
 msgstr "共关注%d个用户"
+
+#: page-new-topic.php:28
+msgid "You can press <kbd>M</kbd> to popup the Markdown syntax cheatsheet."
+msgstr "请按 <kbd>M</kbd> 键弹出 Markdown 语法速查表"
 
 #: page-planes.php:16
 msgid "%d node now and growing."

@@ -77,6 +77,8 @@ add_action( 'after_setup_theme', 'vp_theme_setup' );
  */
 function vp_enqueue_scripts(){
   wp_enqueue_script( 'html5placeholder', get_bloginfo('template_url').'/js/jquery.html5.placeholder.js', array('jquery'), '1.0.1', true );
+  wp_enqueue_script( 'facebox', get_bloginfo( 'template_url' ) . '/js/facebox.js', array( 'jquery' ), '1.3', true );
+  wp_enqueue_script( 'global', get_bloginfo( 'template_url' ) . '/js/global.js', array( 'jquery' ), '0.0.1', true );
 }
 add_action('wp_enqueue_scripts', 'vp_enqueue_scripts');
 
