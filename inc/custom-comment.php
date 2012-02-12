@@ -30,6 +30,22 @@ function vp_filter_comments_count( $count ) {
 add_filter( 'get_comments_number', 'vp_filter_comments_count', 0 );
 
 /**
+ * Display the comment link in topics list, must use within the loop.
+ * Replace the buildin comments_popup_link().
+ *
+ * @since 0.0.2
+ */
+function vp_comments_link() {
+  $id = get_the_ID();
+  $num = get_comments_number( $id );
+  
+  if ( 0 == $num )
+    return;
+  
+  $output = '<a href="' . vp_get_permalink( $id ) . '">' . $num . '</a>';
+  echo $output;
+}
+/**
  * Custom the comments list.
  *
  * @since 0.0.1

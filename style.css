@@ -355,7 +355,7 @@ td { vertical-align: top; }
   float: left;
   margin: 0 0 0 -58px;
 }
-.topics-list .f-right a {
+.topics-list .comments-link a {
   background: #aab0c6;
   border-radius: 12px;
   color: #fff;
@@ -365,7 +365,10 @@ td { vertical-align: top; }
   padding: 2px 10px;
   line-height: 12px;
 }
-.topics-list .f-right a:hover, .topics-list .f-right a:active {
+.topics-list .comments-link a:visited {
+  background: #e5e5e5;
+}
+.topics-list .comments-link a:hover, .topics-list .comments-link a:active {
   background: #969cb1;
 }
 .topic-title {

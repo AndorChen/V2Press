@@ -12,6 +12,30 @@
  ============================================================================ */
 
 /**
+ * Display the custom topic link.
+ *
+ * @since 0.0.2
+ */
+function vp_the_permalink() {
+  echo vp_get_permalink();
+}
+
+/**
+ * Retrieve the custom topic link.
+ * Custom the buildin the_permalink(), add reply number at the end.
+ *
+ * @since 0.0.2
+ */
+function vp_get_permalink( $id = 0 ) {
+  $num = get_comments_number( $id );
+
+  $output = get_permalink( $id );
+  if ( 0 != $num )
+    $output .= '#reply' . $num;
+  
+  return $output;
+}
+/**
  * Display the post author's avatar link to profile page, must use within the loop.
  *
  * @since 0.0.1
