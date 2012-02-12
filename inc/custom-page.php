@@ -220,3 +220,14 @@ function vp_init_pages() {
   // Notification page
   vp_create_page( esc_sql( 'notifications' ), 'v2press_notifications_page_id', 'Notifications', '', 0, 'page-notifications.php' );
 }
+
+/**
+ * Retrieve these predefined page names.
+ *
+ * @since 0.0.2
+ * @return array Thepredefined page names.
+ */
+function vp_predefined_pages() {
+  $pages = array( 'signup', 'signin', 'forgot', 'reset', 'settings', 'bookmarks', 'following', 'new', 'recent', 'planes', 'notifications' );
+  return $pages;
+}

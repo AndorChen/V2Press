@@ -10,7 +10,6 @@
  *
  * @since 0.0.1
  ============================================================================ */
-add_action( 'wp_head', 'vp_noindex_predefined_pages' );
 
 /**
  * Display the noindex meta in head.
@@ -27,13 +26,14 @@ function vp_noindex_page() {
  * @since 0.0.1
  */
 function vp_noindex_predefined_pages() {
-  $pages = array( 'signup', 'signin', 'forgot', 'reset', 'bookmarks', 'following', 'settings', 'new', 'planes' );
+  $pages = vp_predefined_pages();
   foreach ( $pages as $page ) {
     if ( is_page( $page ) ) {
       return vp_noindex_page();
     } 
   }
 }
+add_action( 'wp_head', 'vp_noindex_predefined_pages' );
 
 /**
  * Add trailing slash to everthing except single topic page url.
@@ -81,10 +81,9 @@ add_filter( 'comments_popup_link_attributes', 'vp_echo_nofollow' );
  * @since 0.0.1
  */
 function vp_description() {
-  $desc = '';
   
   if ( is_home() ) {
-    $desc .= get_bloginfo( 'description' );
+    $desc = get_bloginfo( 'description' );
   } elseif ( is_singular() ) {
     global $post;
     $content = $post->post_content;
@@ -94,8 +93,12 @@ function vp_description() {
     $content = esc_attr( $content );
     $content = strip_shortcodes( $content );
     $excerpt = substr( $content, 0, 140 );
-    $desc .= $excerpt;
+    
+    $desc = $excerpt;
   }
+  
+  if ( empty( $desc ) )
+    return;
   
   echo '<meta name="description" content="' . $desc . '" />' . "\n";
 }
