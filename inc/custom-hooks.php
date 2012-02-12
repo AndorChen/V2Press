@@ -16,8 +16,6 @@ remove_filter( 'the_content', 'convert_smilies' );
 remove_filter( 'the_content_rss', 'wpautop' );
 remove_filter( 'content_save_pre',  'balanceTags', 50 );
 remove_filter( 'excerpt_save_pre',  'balanceTags', 50 );
-add_filter( 'the_content',  	  'balanceTags', 50 );
-add_filter( 'get_the_excerpt', 'balanceTags', 9 );
 
 require_once( VP_LIBS_PATH . '/markdown-extra.php' );
 remove_filter( 'comment_text', 'wpautop', 30 );

@@ -114,6 +114,17 @@ function vp_comment_reply_link( $args = array(), $comment = null ) {
 }
 
 /**
+ * Filter the comment content to strip all tags.
+ *
+ * @since 0.0.2
+ */
+function vp_comment_strip_tags( $content ) {
+  $content = strip_tags( $content );
+  return $content;
+}
+add_filter( 'pre_comment_content', 'vp_comment_strip_tags', 5 ); // Before Markdown
+
+/**
  * Filter comment text to display @mention link.
  *
  * @since 0.0.2

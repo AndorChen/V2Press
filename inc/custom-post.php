@@ -209,7 +209,7 @@ function vp_do_create_new_topic() {
       $node_id = $_POST['cat'];
     }
     $title = $_POST['topic_title'];
-    $content_filtered = $_POST['topic_content_filtered'];
+    $content_filtered = strip_tags( $_POST['topic_content_filtered'] );
     $user_id = get_current_user_id();
 
     // Node empty
@@ -356,7 +356,7 @@ function vp_do_edit_topic() {
   if ( isset( $_POST['topic_title'] ) && wp_verify_nonce( $_POST['edit_topic_nonce'], 'edit-topic-nonce' ) ) {
     $topic_id = get_query_var( 'p' );
     $title = $_POST['topic_title'];
-    $content_filtered = $_POST['topic_content_filtered'];
+    $content_filtered = strip_tags( $_POST['topic_content_filtered'] );
 
     // Title empty
     if ( empty( $title ) ) {
