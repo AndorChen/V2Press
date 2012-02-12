@@ -124,7 +124,7 @@ function vp_signup_form_fields() {
 		<p>
 			<label for="vp_user_login"><?php _e( 'Username', 'v2press' ); ?></label>
 			<input type="text" name="vp_user_login" id="vp_user_login" class="form-field required" value="<?php echo $_POST['vp_user_login'] ?>" />
-			<span class="field-helper"><?php _e( 'Use alphanumeric, _, - only.', 'v2press' ); ?></span>
+			<span class="field-helper"><?php _e( 'Use alphanumeric, _, - only. Within 4-12 characters.', 'v2press' ); ?></span>
 		</p>
 		<p>
 			<label for="vp_user_email"><?php _e( 'Email', 'v2press' ); ?></label>
@@ -180,8 +180,13 @@ function vp_do_signup() {
 		}
 		
 		// Empty username
-		if( empty( $user_login) ) {
+		if( empty( $user_login ) ) {
 			vp_errors()->add( 'username_empty', __( 'Please enter a username', 'v2press' ) );
+		}
+		
+		// Username out range (4-12)
+		if ( !empty( $user_login ) && ( 4 > strlen( $user_login ) || 12 < strlen( $user_login ) ) ) {
+		  vp_errors()->add( 'username_out_range', __( 'Username length must within 4-12 characters', 'v2press' ) );
 		}
 		
 		// Empty email
