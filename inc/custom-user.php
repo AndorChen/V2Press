@@ -28,7 +28,6 @@ function vp_user_profile_link( $user_id = false ) {
  *
  * @since 0.0.2
  *
- * @use vp_get_user_profile_url()
  * @param bool|int $user_id Optional. The user's id. If false, the current user's id.
  * @param bool $display Optional. If display the link or return it. Default is display.
  * @return string The user's profile text link, if no $user_id the current user's.

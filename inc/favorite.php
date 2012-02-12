@@ -46,7 +46,7 @@ function vp_bookmark() {
     $output .= sprintf( _n( '%d user bookmarked', '%d users bookmarked', $bookmarked_num, 'v2press' ), $bookmarked_num );
   }
   
-  $output .= '<a class="fav" href="?bookmark=' . $action . '&topic=' . $topic_id . '" title="' . esc_attr($text) . '">' . $text . '</a>';
+  $output .= '<a class="fav ' . $action . '" href="?bookmark=' . $action . '&topic=' . $topic_id . '" title="' . esc_attr($text) . '">' . $text . '</a>';
   $output .= '</div>';
   
   echo $output;
@@ -120,13 +120,6 @@ function vp_get_bookmarks_count() {
   
   return $count;
 }
-
-
-/* =============================================================================
- * Favorite a category.
- *
- * @since 0.0.1
- ============================================================================ */
  
  
 /* =============================================================================
@@ -166,7 +159,9 @@ function vp_following() {
       $text = __( 'Following', 'v2press' );
     }
     
-    $output = '<a class="' . $class . '" href="?following=' . $action . '&user=' . $user_id . '" title="' . $text . '">' . $text . '</a>';
+    $output = '<div class="follow-user">';
+    $output .= '<a class="' . $class . ' ' . $action . '" href="?following=' . $action . '&user=' . $user_id . '" title="' . $text . '">' . $text . '</a>';
+    $output .= '</div>';
     
     echo $output; 
   }
@@ -214,7 +209,7 @@ function vp_do_following() {
       update_user_meta( $user_id, 'v2press_who_following_me', $who_f_him );
     } // END if $action
     
-    $redirect_to = vp_get_user_profile_url( $user_id );
+    $redirect_to = get_author_posts_url( $user_id );
     wp_redirect( $redirect_to );
     exit;
   } // END if !empty( $action )

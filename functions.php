@@ -82,7 +82,9 @@ function vp_enqueue_scripts(){
 
   // Localize script
   wp_localize_script( 'global', 'globalL10n', array(
-    'replyConfirm' => __( 'One reply a time please! Replace the previous one?', 'v2press' )
+    'replyConfirm' => __( 'One reply a time please! Replace the previous one?', 'v2press' ),
+    'stylesheetURI' => get_stylesheet_directory_uri(),
+    'newTopicURL' => vp_get_page_url_by_slug( 'new' )
   ) );
 }
 add_action('wp_enqueue_scripts', 'vp_enqueue_scripts');

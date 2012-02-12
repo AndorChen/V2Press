@@ -6,8 +6,15 @@
  */
 
 jQuery(document).ready(function(){
+  
+  // Hotkeys
   vpKeys = new HotKey();
   vpKeys.add( 'm', function(){ showMarkdownHelper(); });
+  vpKeys.add( 'n', function(){ createNewTopic(); });
+  vpKeys.add( 'b', function(){ bookmarkTopic(); });
+  vpKeys.add( 'B', function(){ unBookmarkTopic(); });
+  vpKeys.add( 'f', function(){ followUser(); });
+  vpKeys.add( 'F', function(){ unFollowUser(); });
 });
 
 /* Reply to */
@@ -48,14 +55,86 @@ function replyTo( cmtId ) {
 }
 
 /* Facebox Settings */
-jQuery.facebox.settings.loadingImage = 'wp-content/themes/v2press/images/loading.gif';
-jQuery.facebox.settings.closeImage = 'wp-content/themes/v2press/images/facebox-close.png';
+jQuery.facebox.settings.loadingImage = globalL10n.stylesheetURI + '/images/loading.gif';
+jQuery.facebox.settings.closeImage = globalL10n.stylesheetURI + '/images/facebox-close.png';
 
-/* Show the Markdown helper block */
+/* Show the Markdown helper block hotkey callback */
 function showMarkdownHelper() {
   var $helper = jQuery('#markdown-helper');
   if ( 0 < $helper.length )
     jQuery("#facebox .cheatsheet:visible").length ? jQuery.facebox.close() : jQuery.facebox({div: "#markdown-helper"}, "cheatsheet");
+}
+
+/* Create new topic hotkey callback */
+function createNewTopic() {
+  var $link = jQuery('.create-new-topic-link>a');
+  var $url;
+  
+  if ( $link.length > 0 ) {
+    $url = $link[0].href;
+  } else {
+    $url = globalL10n.newTopicURL;
+  }
+  
+  if ( $url != null )
+    redirectTo( $url );
+}
+
+/* Bookmark topic hotkey callback */
+function bookmarkTopic() {
+  var $link = jQuery('.favorite-topic>.add');
+  var $url;
+  
+  if ( $link.length > 0 )
+    $url = $link[0].href;
+    
+  if ( $url != null )
+    redirectTo( $url );
+}
+
+/* unBookmark topic hotkey callback */
+function unBookmarkTopic() {
+  $link = jQuery('.favorite-topic>.remove');
+  var $url;
+  
+  if ( $link.length > 0 )
+    $url = $link[0].href;
+
+  if ( $url != null )
+    redirectTo( $url );
+}
+
+/* Follow user hotkey callback */
+function followUser() {
+  var $link = jQuery('.follow-user>.add');
+  var $url;
+  
+  if ( $link.length > 0 )
+    $url = $link[0].href;
+    
+  if ( $url != null )
+    redirectTo( $url );
+}
+
+/* unFollow user hotkey callback */
+function unFollowUser() {
+  $url = jQuery('.follow-user>.remove')[0].href;
+  if ( $url != null )
+    redirectTo( $url );
+}
+
+/* Helper functions */
+function redirectTo( href ) {
+  /* fix IE */
+	if ( jQuery.browser.msie ) {
+	  var a = document.createElement('a');
+	  a.style.display = 'none';
+	  a.href = href;
+	  document.body.appendChild(a);
+	  a.click();
+	} else {
+	  location.href = href;
+	}
 }
 
 /* from http://la.ma.la/blog/diary_200511041713.htm - hotkey.js */

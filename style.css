@@ -577,7 +577,7 @@ a.notification-delete:hover, a.notification-delete:active{
   left: 10px;
   top: 10px;
 }
-#member-info .btn {
+#member-info .follow-user {
   position: absolute;
   right: 10px;
   top: 10px;
