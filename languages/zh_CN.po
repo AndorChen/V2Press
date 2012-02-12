@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http:/v2press.com\n"
-"POT-Creation-Date: 2012-02-12 05:37:25+00:00\n"
-"MIME-Version: 1.0\n"
+"POT-Creation-Date: 2012-02-12 11:05:46+00:00\n"
+"MIME-Version: 0.0.1\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
@@ -355,8 +355,8 @@ msgid "Username"
 msgstr "用户名"
 
 #: inc/member.php:78
-msgid "Use alphanumeric, _, - only."
-msgstr "只可使用英文字母、数字、下划线（_）和连字符（-）"
+msgid "Use alphanumeric, _, - only. Within 4-12 characters."
+msgstr "只可使用英文字母、数字、下划线（_）和连字符（-），长度 4-12 个字符"
 
 #: inc/member.php:81 inc/member.php:361 inc/member.php:614
 msgid "Email"
@@ -389,6 +389,10 @@ msgstr "用户名不可用"
 #: inc/member.php:134
 msgid "Please enter a username"
 msgstr "请输入用户名"
+
+#: inc/member.php:189
+msgid "Username length must within 4-12 characters"
+msgstr "用户名长度必须在 4-12 个字符之内"
 
 #: inc/member.php:139
 msgid "Please enter your Email"
