@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v2press\n"
-"POT-Creation-Date: 2012-02-12 11:05:46+00:00\n"
+"POT-Creation-Date: 2012-02-12 13:39:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -50,63 +50,119 @@ msgstr ""
 msgid "You need %1$ssignin%2$s to add replies."
 msgstr ""
 
-#: content-markdown-helper.php:2
-msgctxt "markdown"
+#: content-helpers.php:2
+msgctxt "helper"
 msgid "Markdown Cheatsheet"
 msgstr ""
 
-#: content-markdown-helper.php:6
-msgctxt "markdown"
+#: content-helpers.php:6
+msgctxt "helper"
 msgid "Paragraph"
 msgstr ""
 
-#: content-markdown-helper.php:11
-msgctxt "markdown"
+#: content-helpers.php:11
+msgctxt "helper"
 msgid "Headers"
 msgstr ""
 
-#: content-markdown-helper.php:16
-msgctxt "markdown"
+#: content-helpers.php:16
+msgctxt "helper"
 msgid "Text styles"
 msgstr ""
 
-#: content-markdown-helper.php:27
-msgctxt "markdown"
+#: content-helpers.php:27
+msgctxt "helper"
 msgid "Unordered List"
 msgstr ""
 
-#: content-markdown-helper.php:33
-msgctxt "markdown"
+#: content-helpers.php:33
+msgctxt "helper"
 msgid "Ordered List"
 msgstr ""
 
-#: content-markdown-helper.php:40
-msgctxt "markdown"
+#: content-helpers.php:40
+msgctxt "helper"
 msgid "Images"
 msgstr ""
 
-#: content-markdown-helper.php:43
-msgctxt "markdown"
+#: content-helpers.php:43
+msgctxt "helper"
 msgid "Links"
 msgstr ""
 
-#: content-markdown-helper.php:49
-msgctxt "markdown"
+#: content-helpers.php:49
+msgctxt "helper"
 msgid "Blockquotes"
 msgstr ""
 
-#: content-markdown-helper.php:55
-msgctxt "markdown"
+#: content-helpers.php:55
+msgctxt "helper"
 msgid "Code Block"
 msgstr ""
 
-#: content-markdown-helper.php:64
-msgctxt "markdown"
+#: content-helpers.php:64
+msgctxt "helper"
 msgid "Inline code"
 msgstr ""
 
-#: content-markdown-helper.php:70
+#: content-helpers.php:70
+msgctxt "helper"
 msgid "For more syntax references, please visit %1$sMarkdown Syntax%2$s"
+msgstr ""
+
+#: content-helpers.php:75
+msgctxt "helper"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: content-helpers.php:78
+msgctxt "helper"
+msgid "Global"
+msgstr ""
+
+#: content-helpers.php:79
+msgctxt "helper"
+msgid "Show Markdown Cheatsheet"
+msgstr ""
+
+#: content-helpers.php:80
+msgctxt "helper"
+msgid "Create new topic"
+msgstr ""
+
+#: content-helpers.php:81
+msgctxt "helper"
+msgid "Show this helper dialog"
+msgstr ""
+
+#: content-helpers.php:85
+msgctxt "helper"
+msgid "Topic Page"
+msgstr ""
+
+#: content-helpers.php:86
+msgctxt "helper"
+msgid "Bookmark this topic"
+msgstr ""
+
+#: content-helpers.php:87
+msgctxt "helper"
+msgid "Unbookmark this topic"
+msgstr ""
+
+#: content-helpers.php:89
+msgctxt "helper"
+msgid "Member Page"
+msgstr ""
+
+#: content-helpers.php:90
+msgctxt "helper"
+msgid "Follow this member"
+msgstr ""
+
+#: content-helpers.php:91
+msgctxt "helper"
+msgid "Unfollow this member"
 msgstr ""
 
 #: content-single.php:18
@@ -335,11 +391,11 @@ msgid_plural "%d users bookmarked"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/favorite.php:160
+#: inc/favorite.php:153
 msgid "Unfollowing"
 msgstr ""
 
-#: inc/favorite.php:166
+#: inc/favorite.php:159
 msgid "Following"
 msgstr ""
 

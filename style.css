@@ -837,14 +837,14 @@ li.comment {
   font-size: 12px;
 }
 
-#markdown-helper {
-  display: none;
-}
 
 /* =======
    3rd libs
  ====== */
 /* Facebox */
+#markdown-helper, #hotkeys-helper {
+  display: none;
+}
 #facebox {
   position: absolute;
   top: 0;
@@ -877,9 +877,15 @@ li.comment {
   font-size: 12px;
   font-weight: lighter;
 }
-#facebox .markdown-helper-content {
+#facebox .content p {
+  margin: 10px 0;
+}
+#facebox .helper-content {
   display: table;
   width: 800px;
+}
+#facebox .hotkeys .helper-content {
+  width: 460px;
 }
 #facebox .facebox-col {
   display: table-cell;

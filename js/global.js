@@ -15,6 +15,7 @@ jQuery(document).ready(function(){
   vpKeys.add( 'B', function(){ unBookmarkTopic(); });
   vpKeys.add( 'f', function(){ followUser(); });
   vpKeys.add( 'F', function(){ unFollowUser(); });
+  vpKeys.add( 'h', function(){ showHotkeysHelper(); });
 });
 
 /* Reply to */
@@ -94,7 +95,7 @@ function bookmarkTopic() {
 
 /* unBookmark topic hotkey callback */
 function unBookmarkTopic() {
-  $link = jQuery('.favorite-topic>.remove');
+  var $link = jQuery('.favorite-topic>.remove');
   var $url;
   
   if ( $link.length > 0 )
@@ -121,6 +122,13 @@ function unFollowUser() {
   $url = jQuery('.follow-user>.remove')[0].href;
   if ( $url != null )
     redirectTo( $url );
+}
+
+/* Show hotkeys helper hotkey callback */
+function showHotkeysHelper() {
+  var $helper = jQuery('#hotkeys-helper');
+  if ( 0 < $helper.length )
+    jQuery("#facebox .hotkeys:visible").length ? jQuery.facebox.close() : jQuery.facebox({div: "#hotkeys-helper"}, "hotkeys");
 }
 
 /* Helper functions */

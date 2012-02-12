@@ -22,7 +22,7 @@
     </div>
   </footer><!--END #footer-->
   
-  <?php get_template_part( 'content', 'markdown-helper' ); ?>
+  <?php get_template_part( 'content', 'helpers' ); ?>
   
   <?php wp_footer(); ?>
 </body>

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http:/v2press.com\n"
-"POT-Creation-Date: 2012-02-12 11:05:46+00:00\n"
+"POT-Creation-Date: 2012-02-12 13:39:05+00:00\n"
 "MIME-Version: 0.0.1\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,64 +51,120 @@ msgstr "回复功能关闭"
 msgid "You need %1$ssignin%2$s to add replies."
 msgstr "需要%1$s登录%2$s才可以添加回复。"
 
-#: content-markdown-helper.php:2
-msgctxt "markdown"
+#: content-helpers.php:2
+msgctxt "helper"
 msgid "Markdown Cheatsheet"
 msgstr "Markdown 语法速查表"
 
-#: content-markdown-helper.php:6
-msgctxt "markdown"
+#: content-helpers.php:6
+msgctxt "helper"
 msgid "Paragraph"
 msgstr "段落"
 
-#: content-markdown-helper.php:11
-msgctxt "markdown"
+#: content-helpers.php:11
+msgctxt "helper"
 msgid "Headers"
 msgstr "标题"
 
-#: content-markdown-helper.php:16
-msgctxt "markdown"
+#: content-helpers.php:16
+msgctxt "helper"
 msgid "Text styles"
 msgstr "文本样式"
 
-#: content-markdown-helper.php:27
-msgctxt "markdown"
+#: content-helpers.php:27
+msgctxt "helper"
 msgid "Unordered List"
 msgstr "无序列表"
 
-#: content-markdown-helper.php:33
-msgctxt "markdown"
+#: content-helpers.php:33
+msgctxt "helper"
 msgid "Ordered List"
 msgstr "有序列表"
 
-#: content-markdown-helper.php:40
-msgctxt "markdown"
+#: content-helpers.php:40
+msgctxt "helper"
 msgid "Images"
 msgstr "图片"
 
-#: content-markdown-helper.php:43
-msgctxt "markdown"
+#: content-helpers.php:43
+msgctxt "helper"
 msgid "Links"
 msgstr "链接"
 
-#: content-markdown-helper.php:49
-msgctxt "markdown"
+#: content-helpers.php:49
+msgctxt "helper"
 msgid "Blockquotes"
 msgstr "引用"
 
-#: content-markdown-helper.php:55
-msgctxt "markdown"
+#: content-helpers.php:55
+msgctxt "helper"
 msgid "Code Block"
 msgstr "代码块"
 
-#: content-markdown-helper.php:64
-msgctxt "markdown"
+#: content-helpers.php:64
+msgctxt "helper"
 msgid "Inline code"
 msgstr "行间代码"
 
-#: content-markdown-helper.php:70
+#: content-helpers.php:70
+msgctxt "helper"
 msgid "For more syntax references, please visit %1$sMarkdown Syntax%2$s"
 msgstr "更多的语法介绍，请访问 %1$sMarkdown Syntax%2$s"
+
+#: content-helpers.php:75
+msgctxt "helper"
+msgid "Keyboard Shortcuts"
+msgstr "键盘快捷键"
+
+#: content-helpers.php:78
+msgctxt "helper"
+msgid "Global"
+msgstr "全局"
+
+#: content-helpers.php:79
+msgctxt "helper"
+msgid "Show Markdown Cheatsheet"
+msgstr "显示 Markdown 语法速查表"
+
+#: content-helpers.php:80
+msgctxt "helper"
+msgid "Create new topic"
+msgstr "创建新话题"
+
+#: content-helpers.php:81
+msgctxt "helper"
+msgid "Show this helper dialog"
+msgstr "显式本对话框"
+
+#: content-helpers.php:85
+msgctxt "helper"
+msgid "Topic Page"
+msgstr "话题页面"
+
+#: content-helpers.php:86
+msgctxt "helper"
+msgid "Bookmark this topic"
+msgstr "收藏该话题"
+
+#: content-helpers.php:87
+msgctxt "helper"
+msgid "Unbookmark this topic"
+msgstr "取消收藏该话题"
+
+#: content-helpers.php:89
+msgctxt "helper"
+msgid "Member Page"
+msgstr "个人信息页面"
+
+#: content-helpers.php:90
+msgctxt "helper"
+msgid "Follow this member"
+msgstr "关注该用户"
+
+#: content-helpers.php:91
+msgctxt "helper"
+msgid "Unfollow this member"
+msgstr "取消关注该用户"
 
 #: content-single.php:18
 msgid "By %1$s at %2$s"
