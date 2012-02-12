@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http:/v2press.com\n"
-"POT-Creation-Date: 2012-02-11 14:05:07+00:00\n"
+"POT-Creation-Date: 2012-02-12 05:37:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -137,6 +137,10 @@ msgstr "保留所有权力。"
 #: functions.php:56
 msgid "Footer Navigation"
 msgstr "底部导航"
+
+#: functions.php:85
+msgid "One reply a time please! Replace the previous one?"
+msgstr "一次只可回复一个用户！覆盖前一个回复？"
 
 #: header.php:38 header.php:44
 msgctxt "menu"

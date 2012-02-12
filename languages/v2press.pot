@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v2press\n"
-"POT-Creation-Date: 2012-02-11 14:05:07+00:00\n"
+"POT-Creation-Date: 2012-02-12 05:37:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -137,29 +137,33 @@ msgstr ""
 msgid "Footer Navigation"
 msgstr ""
 
-#: header.php:38 header.php:44
+#: functions.php:85
+msgid "One reply a time please! Replace the previous one?"
+msgstr ""
+
+#: header.php:35 header.php:41
 msgctxt "menu"
 msgid "Home"
 msgstr ""
 
-#: header.php:39 inc/member.php:323 sidebar.php:26
+#: header.php:36 inc/member.php:323 sidebar.php:26
 msgid "Signin"
 msgstr ""
 
-#: header.php:40 sidebar.php:25
+#: header.php:37 sidebar.php:25
 msgid "Signup"
 msgstr ""
 
-#: header.php:46
+#: header.php:43
 msgid "Settings"
 msgstr ""
 
-#: header.php:48
+#: header.php:45
 msgctxt "menu"
 msgid "Admin"
 msgstr ""
 
-#: header.php:50
+#: header.php:47
 msgctxt "menu"
 msgid "Signout"
 msgstr ""
@@ -221,23 +225,23 @@ msgstr ""
 msgid "No nodes yet."
 msgstr ""
 
-#: inc/custom-comment.php:66
+#: inc/custom-comment.php:82
 msgid "Your reply is awaiting moderation."
 msgstr ""
 
-#: inc/custom-comment.php:87
+#: inc/custom-comment.php:103
 msgid "Reply"
 msgstr ""
 
-#: inc/custom-comment.php:152
+#: inc/custom-comment.php:168
 msgid "Add a reply"
 msgstr ""
 
-#: inc/custom-comment.php:161
+#: inc/custom-comment.php:177
 msgid "Add Reply"
 msgstr ""
 
-#: inc/custom-comment.php:169
+#: inc/custom-comment.php:185
 msgid ""
 "Please avoid posting pointless replies, it's always great to save everyone's "
 "precious time."
@@ -247,47 +251,47 @@ msgstr ""
 msgid "Not Found"
 msgstr ""
 
-#: inc/custom-post.php:53
+#: inc/custom-post.php:77
 msgid "%s ago"
 msgstr ""
 
-#: inc/custom-post.php:126 inc/custom-template-tags.php:95
+#: inc/custom-post.php:150 inc/custom-template-tags.php:95
 msgid "Create New Topic"
 msgstr ""
 
-#: inc/custom-post.php:150
+#: inc/custom-post.php:174
 msgid "Select Node"
 msgstr ""
 
-#: inc/custom-post.php:156
+#: inc/custom-post.php:180
 msgid "Topic title here"
 msgstr ""
 
-#: inc/custom-post.php:164
+#: inc/custom-post.php:188
 msgid "Create Topic"
 msgstr ""
 
-#: inc/custom-post.php:193
+#: inc/custom-post.php:217
 msgid "Please select a node"
 msgstr ""
 
-#: inc/custom-post.php:206 inc/custom-post.php:339
+#: inc/custom-post.php:230 inc/custom-post.php:363
 msgid "Please enter the topic title"
 msgstr ""
 
-#: inc/custom-post.php:211 inc/custom-post.php:344
+#: inc/custom-post.php:235 inc/custom-post.php:368
 msgid "Please write something useful"
 msgstr ""
 
-#: inc/custom-post.php:264
+#: inc/custom-post.php:288
 msgid "edit"
 msgstr ""
 
-#: inc/custom-post.php:294
+#: inc/custom-post.php:318
 msgid "You cannot edt this topic 15 minites after created."
 msgstr ""
 
-#: inc/custom-post.php:315
+#: inc/custom-post.php:339
 msgid "Submit Changes"
 msgstr ""
 

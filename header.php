@@ -16,9 +16,6 @@
   <![endif]-->
     
   <?php wp_head(); ?>
-  <?php if ( is_single() && comments_open() ) { ?>
-  <script src="<?php echo get_bloginfo( 'template_url' ); ?>/js/reply.js" type="text/javascript"></script>
-  <?php } ?>
 </head>
 <body <?php body_class(); ?>>
   <header id="header" role="banner">
