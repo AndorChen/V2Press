@@ -35,7 +35,7 @@ function vp_member_info_list() {
   $user_id = get_query_var( 'author' );
   $user = get_user_by( 'id', $user_id );
   $site = $user->user_url;
-  $followers = sprintf( _n( '%d follower', '%d followers', vp_get_followers_count(), 'v2press' ), vp_get_followers_count() );;
+  $followers = sprintf( _n( '%d follower', '%d followers', vp_get_followers_count(), 'v2press' ), vp_get_followers_count() );
   
   $output = '<ul class="member-info-list">';
   

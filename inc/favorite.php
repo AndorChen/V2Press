@@ -242,7 +242,7 @@ function vp_get_following_count() {
 function vp_get_followers_count() {
   $count = 0;
   
-  $user_id = get_user_by( 'login', get_query_var( 'member_name' ) )->ID;
+  $user_id = get_user_by( 'login', get_query_var( 'author_name' ) )->ID;
   $who_f_me =  (array) get_user_meta( $user_id, 'v2press_who_following_me', true );
   // User meta exists
   if ( '' != $who_f_me[0] ) {
