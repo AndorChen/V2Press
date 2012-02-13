@@ -17,7 +17,7 @@
       </div>
       
       <div class="copyright inner">
-        <p>&copy;2012 <?php bloginfo( 'name' ); ?> <?php _e( 'All rights reserved.', 'v2press' ); ?></p>
+        <p>&copy;2012 <?php bloginfo( 'name' ); ?> <?php _e( 'Some rights reserved.', 'v2press' ); ?></p>
       </div>
     </div>
   </footer><!--END #footer-->

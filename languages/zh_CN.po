@@ -187,8 +187,8 @@ msgid "Powered by WordPress and love."
 msgstr "由 WordPress 和“爱”强力驱动。"
 
 #: footer.php:18
-msgid "All rights reserved."
-msgstr "保留所有权力。"
+msgid "Some rights reserved."
+msgstr "保留部分权利。"
 
 #: functions.php:56
 msgid "Footer Navigation"
