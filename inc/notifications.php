@@ -113,8 +113,22 @@ add_action( 'template_redirect', 'vp_delete_notification' );
  */
 function vp_unread_notifications_count() {
   $count = (int) get_user_meta( get_current_user_id(), 'v2press_notifications_unread', true );
-
   return $count;
+}
+
+function vp_unread_notifications() {
+  $count = vp_unread_notifications_count();
+  
+  $text = '';
+  if ( $count > 0 )
+    $text .= '<span class="new-notifications">';
+
+  $text .= sprintf( _n( '%d notification', '%d notifications', $count, 'v2press' ), $count );
+  
+  if ( $count > 0 )
+    $text .= '</span>';
+
+  echo $text;
 }
 
 /**

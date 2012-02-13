@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="footing">
-      <p class="xsmall fade"><a href="<?php echo vp_get_page_url_by_slug( 'notifications' ); ?>"><?php printf( _n( '%d notification', '%d notifications', vp_unread_notifications_count(), 'v2press' ), vp_unread_notifications_count() ); ?></a></p>
+      <p class="xsmall fade"><a href="<?php echo vp_get_page_url_by_slug( 'notifications' ); ?>"><?php vp_unread_notifications(); ?></a></p>
     </div>
     <?php else : ?>
     <div class="heading">

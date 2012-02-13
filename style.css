@@ -750,6 +750,11 @@ li.comment {
 #favorites a:hover span, #favorites a:active span {
   color: #4d5256;
 }
+.new-notifications {
+  background: url("images/dot-orange.png") no-repeat left center;
+  font-weight: bold;
+  padding-left: 16px;
+}
 
 /* Node Description Sidebar */
 #node-desc-sidebar {
