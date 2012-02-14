@@ -89,12 +89,8 @@ add_shortcode( 'vp-signup-form', 'vp_signup_form' );
 function vp_recaptcha_field() {
   require_once( VP_LIBS_PATH . '/recaptchalib.php' );
   $publickey = "6LeIKM0SAAAAALmomciSzl1AQhI1pd_LUdWdr6T9";
-  
-  $lang = WPLANG;
-  if ( defined( $lang ) && '' == $lang )
-    $lang = 'en_US';
-  $lang_parts = split( '_', WPLANG );
-  $lang = join( '-', $lang_parts );
+    
+  $lang = str_replace( '_', '-', get_locale() );
   
   $custom = <<<reTHEME
 <script type="text/javascript">
