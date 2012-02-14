@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v2press\n"
-"POT-Creation-Date: 2012-02-13 08:47:01+00:00\n"
+"POT-Creation-Date: 2012-02-14 04:31:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -399,17 +399,17 @@ msgstr ""
 msgid "Following"
 msgstr ""
 
-#: inc/member.php:38
+#: inc/member.php:39
 msgid "%d follower"
 msgid_plural "%d followers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/member.php:76
+#: inc/member.php:80
 msgid "User registration is not enabled."
 msgstr ""
 
-#: inc/member.php:125 inc/member.php:311 inc/member.php:429 inc/member.php:681
+#: inc/member.php:125 inc/member.php:311 inc/member.php:429 inc/member.php:693
 msgid "Username"
 msgstr ""
 
@@ -417,7 +417,7 @@ msgstr ""
 msgid "Use alphanumeric, _, - only. Within 4-12 characters."
 msgstr ""
 
-#: inc/member.php:130 inc/member.php:433 inc/member.php:686
+#: inc/member.php:130 inc/member.php:433 inc/member.php:698
 msgid "Email"
 msgstr ""
 
@@ -429,7 +429,7 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: inc/member.php:139 inc/member.php:578 inc/member.php:814
+#: inc/member.php:139 inc/member.php:578 inc/member.php:834
 msgid "Password Again"
 msgstr ""
 
@@ -457,7 +457,7 @@ msgstr ""
 msgid "Please enter your Email"
 msgstr ""
 
-#: inc/member.php:199 inc/member.php:736
+#: inc/member.php:199 inc/member.php:754
 msgid "Invalid email"
 msgstr ""
 
@@ -469,7 +469,7 @@ msgstr ""
 msgid "Please enter a password"
 msgstr ""
 
-#: inc/member.php:214 inc/member.php:619 inc/member.php:862
+#: inc/member.php:214 inc/member.php:619 inc/member.php:882
 msgid "Passwords do not match"
 msgstr ""
 
@@ -513,7 +513,7 @@ msgstr ""
 msgid "Please enter your username."
 msgstr ""
 
-#: inc/member.php:471 inc/member.php:731
+#: inc/member.php:471 inc/member.php:749
 msgid "Please enter your email."
 msgstr ""
 
@@ -567,7 +567,7 @@ msgstr ""
 msgid "Please enter your new password and confirm it to reset your password."
 msgstr ""
 
-#: inc/member.php:574 inc/member.php:810
+#: inc/member.php:574 inc/member.php:830
 msgid "New Password"
 msgstr ""
 
@@ -575,70 +575,74 @@ msgstr ""
 msgid "Reset Password"
 msgstr ""
 
-#: inc/member.php:609 inc/member.php:847
+#: inc/member.php:609 inc/member.php:867
 msgid "Please enter your new password."
 msgstr ""
 
-#: inc/member.php:614 inc/member.php:852
+#: inc/member.php:614 inc/member.php:872
 msgid "Please retype your new password."
 msgstr ""
 
-#: inc/member.php:673
+#: inc/member.php:685
 msgid "Your settings is updated"
 msgstr ""
 
-#: inc/member.php:683
+#: inc/member.php:695
 msgid "Username cannot be changed."
 msgstr ""
 
-#: inc/member.php:690
+#: inc/member.php:702
 msgid "Website"
 msgstr ""
 
-#: inc/member.php:694
+#: inc/member.php:708
+msgid "Don't include the @."
+msgstr ""
+
+#: inc/member.php:711
 msgid "Biographical Info"
 msgstr ""
 
-#: inc/member.php:698
+#: inc/member.php:715
 msgid "Languange"
 msgstr ""
 
-#: inc/member.php:704
+#: inc/member.php:721
 msgid "Update Settings"
 msgstr ""
 
-#: inc/member.php:746
+#: inc/member.php:764
 msgid "This Email already used by another user"
 msgstr ""
 
-#: inc/member.php:799
+#: inc/member.php:819
 msgid ""
 "Your password is changed, and your are now signed in with your new password."
 msgstr ""
 
-#: inc/member.php:802
+#: inc/member.php:822
 msgid ""
 "If you don't want to change password, please don't enter either of the three "
 "fields following."
 msgstr ""
 
-#: inc/member.php:806
+#: inc/member.php:826
 msgid "Current Password"
 msgstr ""
 
-#: inc/member.php:820 page-settings.php:40
+#: inc/member.php:840 page-settings.php:40
 msgid "Change Password"
 msgstr ""
 
-#: inc/member.php:842
+#: inc/member.php:862
 msgid "Please enter your current password"
 msgstr ""
 
-#: inc/member.php:857
+#: inc/member.php:877
 msgid "Please user a password different from current one."
 msgstr ""
 
-#: inc/member.php:931
+#: inc/member.php:951
 msgid "Forgot password?"
 msgstr ""
 
@@ -807,9 +811,9 @@ msgstr ""
 msgid "v2press"
 msgstr ""
 
-#. #-#-#-#-#  v2press (v2press 0.0.1)  #-#-#-#-#
+#. #-#-#-#-#  v2press.pot (v2press 0.0.1)  #-#-#-#-#
 #. Theme URI of the plugin/theme
-#. #-#-#-#-#  v2press (v2press 0.0.1)  #-#-#-#-#
+#. #-#-#-#-#  v2press.pot (v2press 0.0.1)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://about.ac/"
 msgstr ""

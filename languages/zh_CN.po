@@ -600,6 +600,10 @@ msgstr "更新设置"
 msgid "This Email already used by another user"
 msgstr "该电子邮件已被其他用户使用"
 
+#: inc/member.php:708
+msgid "Don't include the @."
+msgstr "请勿包含 @"
+
 #: inc/member.php:720
 msgid ""
 "Your password is changed, and your are now signed in with your new password."

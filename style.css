@@ -597,8 +597,11 @@ a.notification-delete:hover, a.notification-delete:active{
 .member-info-list li.member-site {
   background-position: 0 0;
 }
-.member-info-list li.member-followers {
+.member-info-list li.member-twitter {
   background-position: 0 -32px;
+}
+.member-info-list li.member-followers {
+  background-position: 0 -64px;
 }
 .member-info-desc {
   border-top: 1px solid #e2e2e2;

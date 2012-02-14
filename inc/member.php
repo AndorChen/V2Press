@@ -35,13 +35,17 @@ function vp_member_info_list() {
   $user_id = get_query_var( 'author' );
   $user = get_user_by( 'id', $user_id );
   $site = $user->user_url;
+  $twitter = $user->twitter;
   $followers = sprintf( _n( '%d follower', '%d followers', vp_get_followers_count(), 'v2press' ), vp_get_followers_count() );
   
   $output = '<ul class="member-info-list">';
   
   if ( !empty( $site ) )
-    $output .= '<li class="member-site"><a href="' . $site. '" rel="external">' . $site. '</a></li>';
+    $output .= '<li class="member-site"><a href="' . esc_url( $site ). '" rel="external">' . esc_url ( $site ). '</a></li>';
   
+  if( !empty( $twitter ) )
+    $output .= '<li class="member-twitter"><a href="https://twitter.com/#!/' . esc_attr( $twitter ). '" rel="external">@' . $twitter. '</a></li>';
+    
   $output .= '<li class="member-followers">' . $followers. '</li>';
   $output .= '</ul>';
   
@@ -638,6 +642,18 @@ add_action( 'template_redirect', 'vp_do_reset' );
  ============================================================================ */
 
 /**
+ * Add extra contact methods, like Twitter.
+ *
+ * @since 0.0.2
+ */
+function vp_filter_contact_methods( $user_contactmethods ) {
+  $user_contactmethods['twitter'] = 'Twitter';
+  
+  return $user_contactmethods;
+}
+add_filter( 'user_contactmethods', 'vp_filter_contact_methods' );
+
+/**
  * User settings form on Settings page.
  *
  * This function is called directly in Settings page, but not use shortcode.
@@ -687,6 +703,11 @@ function vp_settings_form_fields() {
       <input type="url" name="vp_user_url" id="vp_user_url" class="form-field" value="<?php echo esc_url($user->user_url); ?>" />
     </p>
     <p>
+      <label for="vp_user_twitter">Twitter</label>
+      <input type="text" name="vp_user_twitter" id="vp_user_twitter" class="form-field" value="<?php echo esc_attr($user->twitter); ?>" />
+      <span class="field-helper"><?php _e( "Don't include the @.", 'v2press' ); ?></span>
+    </p>
+    <p>
       <label for="vp_user_bio"><?php _e( 'Biographical Info', 'v2press' ); ?></label>
       <textarea rows="5" cols="30" name="vp_user_bio" id="vp_user_bio" class="form-field"><?php echo $user->description; ?></textarea>
     </p>
@@ -719,6 +740,7 @@ function vp_do_update_settings() {
     $user_url = $_POST['vp_user_url'];
     $user_bio = $_POST['vp_user_bio'];
     $user_lang = $_POST['vp_user_lang'];
+    $user_twitter = $_POST['vp_user_twitter'];
     
     // Not check if username is empty, 'cause its input field is disabled
       
@@ -748,8 +770,10 @@ function vp_do_update_settings() {
         'ID' => $user_id,
         'user_email' => $user_email,
         'user_url' => $user_url,
-        'description' => $user_bio
-      );      
+        'description' => $user_bio,
+        'twitter' => $user_twitter
+      );
+      
       wp_update_user( $user_data );
       update_user_meta( $user_id, 'v2press_my_language', $user_lang );
       
