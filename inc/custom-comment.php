@@ -186,6 +186,7 @@ function vp_comment_form( $post_id = null ) {
 					  </p>
 					  <p class="form-submit">
 							<input name="submit" type="submit" class="btn" value="<?php _e( 'Add Reply', 'v2press' ); ?>" />
+							<input name="redirect_to" type="hidden" value="<?php echo get_permalink() . '#reply' . ( get_comments_number() + 1 ); ?>" />
 							<?php comment_id_fields( $post_id ); ?>
 						</p>
 						<?php do_action( 'comment_form', $post_id ); ?>
@@ -199,3 +200,16 @@ function vp_comment_form( $post_id = null ) {
 		<?php endif; ?>
 	<?php
 }
+
+/**
+ * Filter the redirect location after comment posted.
+ * To /t/1#reply1
+ *
+ * @since 0.0.2
+ */
+function vp_filter_comment_redirect_location( $location ) {
+  $location = empty($_POST['redirect_to']) ? get_comment_link($comment_id) : $_POST['redirect_to'];
+  
+  return $location;
+}
+add_filter( 'comment_post_redirect', 'vp_filter_comment_redirect_location' );
