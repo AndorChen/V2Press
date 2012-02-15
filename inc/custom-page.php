@@ -188,7 +188,7 @@ function vp_create_page( $slug, $option, $page_title = '', $page_content = '', $
  */
 function vp_init_pages() {
   // Signup page
-  vp_create_page( esc_sql( 'signup' ), 'v2press_signup_page_id', 'Signup', '[vp-signup-form]', 'page-need-signout.php' );
+  vp_create_page( esc_sql( 'signup' ), 'v2press_signup_page_id', 'Signup', '[vp-signup-form]', 0, 'page-need-signout.php' );
 
   // Signin page
   vp_create_page( esc_sql( 'signin' ), 'v2press_signin_page_id', 'Signin', '[vp-signin-form]', 0, 'page-need-signout.php' );

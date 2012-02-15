@@ -28,6 +28,8 @@ function vp_init_options() {
   // Permalink
   update_option( 'permalink_structure', '/t/%post_id%' );
   update_option( 'category_base', 'go' );
+  global $wp_rewrite;
+  $wp_rewrite->flush_rules();
   
   // Administrator
   update_user_meta( '1', 'rich_editing', 'false' );

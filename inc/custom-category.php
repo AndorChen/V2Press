@@ -158,7 +158,8 @@ function vp_load_sections() {
     $sections = array();
   } else {
     $sections = split( ',', $sections );
-    $sections = array_map( 'trim', $sections );
+    $sections = array_map( 'trim', $sections ); // trim spaces
+    $sections = array_filter( $sections ); // remove empty element
   }
   
   return $sections;

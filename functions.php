@@ -50,7 +50,7 @@ function vp_activation_hook( $function ) {
 
   if ( !$installed || ( VP_VERSION != $version ) ) {
     call_user_func( $function );
-    update_option( $installed, '1' );
+    update_option( 'v2press_installed', '1' );
     update_option( 'v2press_version', VP_VERSION );
   }
 }
