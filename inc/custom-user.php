@@ -67,7 +67,7 @@ function vp_user_avatar_link( $size = 48, $user_id = false) {
  */
 function vp_get_user_avatar_link( $size = 48, $user_id = false) {
   if ( ! $user_id ) {
-    $user_id = wp_get_current_user()->id;
+    $user_id = get_current_user_id();
   } else {
     $user_id = (int) $user_id;
   }

@@ -28,7 +28,7 @@ function vp_bookmark() {
   // Which users already bookmarked this topic
   $bookmarked = (array) get_post_meta( $topic_id, 'v2press_who_bookmarked_me', true );
   
-  if ( '' != $bookmarked[0] ) {
+  if ( !empty( $bookmarked ) ) {
     $bookmarked_num = count( $bookmarked );
   }
     
@@ -58,22 +58,26 @@ function vp_bookmark() {
  * @since 0.0.1
  */
 function vp_do_bookmark() {
-  $action = $_REQUEST['bookmark'];
-  $topic_id = $_REQUEST['topic'];
-  if ( !isset( $topic_id ) )
+  if ( !is_single() )
+    return;
+  
+  if ( isset( $_REQUEST['bookmark'] ) ) $action = $_REQUEST['bookmark'];
+  if ( isset( $_REQUEST['topic'] ) ) $topic_id = $_REQUEST['topic'];
+  
+  if ( empty( $topic_id ) )
     $topic_id = get_the_ID();
   
   if ( !empty( $action ) && !empty( $topic_id ) ) {
   
-    $user_id = wp_get_current_user()->ID;
+    $user_id = get_current_user_id();
   
     $bookmarked = (array) get_post_meta( $topic_id, 'v2press_who_bookmarked_me', true );
-    if ( '' == $bookmarked[0] ) {
+    if ( empty( $bookmarked ) ) {
       $bookmarked = array();
     }
     
     $user_bookmarked = (array) get_user_meta( $user_id, 'v2press_i_bookmarked_topics', true );
-    if ( '' == $user_bookmarked[0] ) {
+    if (  empty( $user_bookmarked ) ) {
       $user_bookmarked = array();
     }
     
@@ -111,10 +115,10 @@ add_action( 'template_redirect', 'vp_do_bookmark' );
 function vp_get_bookmarks_count() {
   $count = 0;
   
-  $user_id = wp_get_current_user()->ID;
+  $user_id = get_current_user_id();
   $user_bookmarked = (array) get_user_meta( $user_id, 'v2press_i_bookmarked_topics', true );
   
-  if ( '' != $user_bookmarked[0] ) {
+  if ( !empty( $user_bookmarked ) ) {
     $count = count( $user_bookmarked );
   }
   
@@ -173,8 +177,11 @@ function vp_following() {
  * @since 0.0.1
  */
 function vp_do_following() {
-  $action = $_REQUEST['following'];
-  $user_id = $_REQUEST['user'];
+  if ( !is_author() )
+    return;
+  
+  if ( isset( $_REQUEST['following'] ) ) $action = $_REQUEST['following'];
+  if ( isset( $_REQUEST['following'] ) ) $user_id = $_REQUEST['user'];
   
   if ( !empty( $action ) && !empty( $user_id ) ) {
     $current_user_id = wp_get_current_user()->ID;
@@ -227,7 +234,7 @@ function vp_get_following_count() {
   $current_user_id = wp_get_current_user()->ID;
   $i_f_who = (array) get_user_meta( $current_user_id, 'v2press_i_following_who', true );
   // User meta exits
-  if ( '' != $i_f_who[0] ) {
+  if ( !empty( $i_f_who ) ) {
     $count = count( $i_f_who );
   }
   
@@ -245,7 +252,7 @@ function vp_get_followers_count() {
   $user_id = get_user_by( 'login', get_query_var( 'author_name' ) )->ID;
   $who_f_me =  (array) get_user_meta( $user_id, 'v2press_who_following_me', true );
   // User meta exists
-  if ( '' != $who_f_me[0] ) {
+  if ( !empty( $who_f_me ) ) {
     $count = count( $who_f_me );
   }
   
