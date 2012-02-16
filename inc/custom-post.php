@@ -297,8 +297,7 @@ function vp_edit_topic_links() {
  * @since 0.0.1
  */
 function vp_is_edit() {
-  $q = $_GET['edit'];
-  if ( is_single() && $q && 'true' == $q ) {
+  if ( is_single() && isset( $_GET['edit'] ) && 'true' == $_GET['edit'] ) {
     return true;
   }
 
