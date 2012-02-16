@@ -283,6 +283,29 @@ class V2Press_Options {
 			'section' => 'general'
 		);
 		
+		$this->settings['recaptcha'] = array(
+			'section' => 'general',
+			'title'   => '',
+			'desc'    => 'reCAPTCHA',
+			'type'    => 'heading'
+		);
+		
+		$this->settings['recaptcha_publickey'] = array(
+			'title'   => __( 'reCAPTCHA Public Key', 'v2press' ),
+			'desc'    => __( 'Please enter reCAPTCHA public key.', 'v2press' ),
+			'std'     => '',
+			'type'    => 'text',
+			'section' => 'general'
+		);
+		
+		$this->settings['recaptcha_privatekey'] = array(
+			'title'   => __( 'reCAPTCHA Private Key', 'v2press' ),
+			'desc'    => __( 'Please enter reCAPTCHA private key.', 'v2press' ),
+			'std'     => '',
+			'type'    => 'text',
+			'section' => 'general'
+		);
+		
 		/* Google Webmaster Settings */
 		$this->settings['google-webmaster-verify'] = array(
 			'title'   => __( 'Google Webmaster Verfify', 'v2press' ),
@@ -468,3 +491,16 @@ class V2Press_Options {
 }
 
 new V2Press_Options();
+
+/**
+ * Retrieve the theme options.
+ *
+ * @since 0.0.2
+ */
+function vp_get_theme_option( $name ) {
+	$options = get_option( 'v2press_theme_options' );
+	if( isset( $options[$name] ) )
+		return $options[$name];
+	else
+		return false;
+}

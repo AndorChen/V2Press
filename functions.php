@@ -108,16 +108,3 @@ function vp_prevent_admin_access() {
   }
 }
 add_action( 'init', 'vp_prevent_admin_access', 0 );
-
-/**
- * Retrieve the theme options.
- *
- * @since 0.0.2
- */
-function vp_get_theme_option( $name ) {
-	$options = get_option( 'v2press_theme_options' );
-	if( isset( $options[$name] ) )
-		return $options[$name];
-	else
-		return false;
-}

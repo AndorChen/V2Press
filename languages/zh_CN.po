@@ -3,15 +3,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
-"Report-Msgid-Bugs-To: http:/v2press.com\n"
-"POT-Creation-Date: 2012-02-13 08:28:32+00:00\n"
-"MIME-Version: 0.0.1\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2012-MO-DA HO:MI+ZONE\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/v2press\n"
+"POT-Creation-Date: 2012-02-16 16:27:00+00:00\n"
+"PO-Revision-Date: 2012-02-17 00:33+0830\n"
 "Last-Translator: Andor Chen <andor.chen.27@gmail.com>\n"
 "Language-Team: V2Press.com <v2press.com@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=1;\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: CHINA\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 #: author.php:16
 msgid "(This is you!)"
@@ -21,15 +24,15 @@ msgstr "（这是你自己）"
 msgid "Member %s, created at %s."
 msgstr "第%s号会员，创建于%s"
 
-#: author.php:26
+#: author.php:30
 msgid "Member Recent Topics"
 msgstr "最新发表的话题"
 
-#: author.php:42
+#: author.php:46
 msgid "No topics created by this member."
 msgstr "还没有发表话题呢"
 
-#: author.php:46
+#: author.php:50
 msgid "Created %s topics in total."
 msgstr "共发表了%s个话题"
 
@@ -174,23 +177,23 @@ msgstr "%1$s 发表于 %2$s"
 msgid "Sorry, there are no topics yet."
 msgstr "抱歉，尚无话题。"
 
-#: footer.php:12
+#: footer.php:14
 msgid "An %1$sAndor Chen%2$s creation."
 msgstr "%1$sAndor Chen%2$s 个人作品。"
 
-#: footer.php:12
+#: footer.php:14
 msgid "Andor's personal site"
 msgstr "Andor 的个人站点"
 
-#: footer.php:14
+#: footer.php:16
 msgid "Powered by WordPress and love."
 msgstr "由 WordPress 和“爱”强力驱动。"
 
-#: footer.php:18
+#: footer.php:20
 msgid "Some rights reserved."
 msgstr "保留部分权利。"
 
-#: functions.php:56
+#: functions.php:69
 msgid "Footer Navigation"
 msgstr "底部导航"
 
@@ -198,24 +201,28 @@ msgstr "底部导航"
 msgid "One reply a time please! Replace the previous one?"
 msgstr "一次只可回复一个用户！覆盖前一个回复？"
 
-#: header.php:38 header.php:44
+#: header.php:35
+#: header.php:41
 msgctxt "menu"
 msgid "Home"
 msgstr "首页"
 
-#: header.php:39 inc/member.php:323 sidebar.php:23
+#: header.php:36
+#: inc/member.php:345
+#: sidebar.php:26
 msgid "Signin"
 msgstr "登录"
 
-#: header.php:40 sidebar.php:22
+#: header.php:37
+#: sidebar.php:25
 msgid "Signup"
 msgstr "注册"
 
-#: header.php:46
+#: header.php:43
 msgid "Settings"
 msgstr "设置"
 
-#: header.php:48
+#: header.php:45
 msgctxt "menu"
 msgid "Admin"
 msgstr "后台"
@@ -241,140 +248,142 @@ msgstr "节点导航"
 msgid "View All Nodes"
 msgstr "查看所有节点"
 
-#: inc/custom-category.php:22 inc/custom-category.php:55
+#: inc/custom-category.php:22
+#: inc/custom-category.php:55
 msgid "Logo URL"
 msgstr "Logo 地址"
 
-#: inc/custom-category.php:24 inc/custom-category.php:59
-msgid ""
-"The category logo will display in the category show page. You should upload "
-"logo image into V2Press's images/logo directory, and enter the image name "
-"only. The image size is 72x72px."
+#: inc/custom-category.php:24
+#: inc/custom-category.php:59
+msgid "The category logo will display in the category show page. You should upload logo image into V2Press's images/logo directory, and enter the image name only. The image size is 72x72px."
 msgstr "该 LOGO 会在分类的存档页面显式。请将图片上传到 V2Press 主题的 images/logo 目录中，然后填写图片的文件名即可。图片的大小为 72像素x72像素。"
 
-#: inc/custom-category.php:27 inc/custom-category.php:64
+#: inc/custom-category.php:27
+#: inc/custom-category.php:64
 msgid "Description in sidebar"
 msgstr "侧栏中显式的描述"
 
-#: inc/custom-category.php:29 inc/custom-category.php:68
-msgid ""
-"The description text in sidebar. This should content some more detailed "
-"infomation about this category and should use some HTML for format."
+#: inc/custom-category.php:29
+#: inc/custom-category.php:68
+msgid "The description text in sidebar. This should content some more detailed infomation about this category and should use some HTML for format."
 msgstr "该描述会在侧栏中显式，请详尽说明该分类，可以包含 HTML 标签。"
 
-#: inc/custom-category.php:32 inc/custom-category.php:73
+#: inc/custom-category.php:32
+#: inc/custom-category.php:73
 msgid "Section"
 msgstr "分区"
 
-#: inc/custom-category.php:34 inc/custom-category.php:77
+#: inc/custom-category.php:34
+#: inc/custom-category.php:77
 msgid "Please select what section this category belongs to."
 msgstr "请选择该分类所属的区域。"
 
-#: inc/custom-category.php:173
+#: inc/custom-category.php:178
 msgid "None"
 msgstr "未分区"
 
-#: inc/custom-category.php:224
+#: inc/custom-category.php:229
 msgid "No sections yet."
 msgstr "还未建立任何节点区域"
 
-#: inc/custom-category.php:238
+#: inc/custom-category.php:239
 msgid "No nodes yet."
 msgstr "本区域还没有节点"
 
-#: inc/custom-comment.php:64
+#: inc/custom-comment.php:82
 msgid "Your reply is awaiting moderation."
 msgstr "您的回复有待审核。"
 
-#: inc/custom-comment.php:71
-msgid "Reply <span>&darr;</span>"
-msgstr "回复 <span>&darr;</span>"
+#: inc/custom-comment.php:103
+msgid "Reply"
+msgstr "回复"
 
-#: inc/custom-comment.php:107
+#: inc/custom-comment.php:179
 msgid "Add a reply"
 msgstr "添加一个回复"
 
-#: inc/custom-comment.php:122
+#: inc/custom-comment.php:188
 msgid "Add Reply"
 msgstr "添加回复"
 
-#: inc/custom-comment.php:141
-msgid ""
-"Please avoid posting pointless replies, it's always great to save everyone's "
-"precious time."
+#: inc/custom-comment.php:197
+msgid "Please avoid posting pointless replies, it's always great to save everyone's precious time."
 msgstr "请认真考虑自己的回复能够如何帮助到别人。这里不欢迎无意义的“顶”，“沙发”，“不懂”，“楼主火星了”。"
 
 #: inc/custom-page.php:100
 msgid "Not Found"
 msgstr "未找到"
 
-#: inc/custom-post.php:46
+#: inc/custom-post.php:77
 msgid "%s ago"
 msgstr "%s之前"
 
-#: inc/custom-post.php:119 inc/custom-template-tags.php:91
+#: inc/custom-post.php:150
+#: inc/custom-template-tags.php:95
 msgid "Create New Topic"
 msgstr "创建新话题"
 
-#: inc/custom-post.php:143
+#: inc/custom-post.php:174
 msgid "Select Node"
 msgstr "选择区域"
 
-#: inc/custom-post.php:149
+#: inc/custom-post.php:180
 msgid "Topic title here"
 msgstr "话题标题"
 
-#: inc/custom-post.php:157
+#: inc/custom-post.php:188
 msgid "Create Topic"
 msgstr "创建话题"
 
-#: inc/custom-post.php:186
+#: inc/custom-post.php:217
 msgid "Please select a node"
 msgstr "请选择话题分类"
 
-#: inc/custom-post.php:199 inc/custom-post.php:324
+#: inc/custom-post.php:230
+#: inc/custom-post.php:362
 msgid "Please enter the topic title"
 msgstr "请输入话题标题"
 
-#: inc/custom-post.php:204 inc/custom-post.php:329
+#: inc/custom-post.php:235
+#: inc/custom-post.php:367
 msgid "Please write something useful"
 msgstr "请输入一些有意义的内容"
 
-#: inc/custom-post.php:257
+#: inc/custom-post.php:288
 msgid "edit"
 msgstr "编辑"
 
-#: inc/custom-post.php:287
+#: inc/custom-post.php:317
 msgid "You cannot edt this topic 15 minites after created."
 msgstr "话题发布 15 分钟后无法编辑主题"
 
-#: inc/custom-post.php:300
+#: inc/custom-post.php:338
 msgid "Submit Changes"
 msgstr "提交修改"
 
-#: inc/custom-template-tags.php:35
+#: inc/custom-template-tags.php:39
 msgid "Page"
 msgstr "分页"
 
-#: inc/custom-template-tags.php:95
+#: inc/custom-template-tags.php:99
 msgid "Edit \"%s\""
 msgstr "编辑\"%s\""
 
-#: inc/custom-template-tags.php:102
+#: inc/custom-template-tags.php:106
 msgid "Search results for \"%s\""
 msgstr "\"%s\" 的搜索结果"
 
-#: inc/custom-template-tags.php:124
+#: inc/custom-template-tags.php:131
 msgid "%d topic"
 msgid_plural "%d topics"
 msgstr[0] "%d个话题"
 msgstr[1] "%d个话题"
 
-#: inc/custom-template-tags.php:125
+#: inc/custom-template-tags.php:132
 msgid "&laquo; Previous"
 msgstr "&laquo; 上一页"
 
-#: inc/custom-template-tags.php:126
+#: inc/custom-template-tags.php:133
 msgid "Next &raquo;"
 msgstr "下一页 &raquo;"
 
@@ -392,246 +401,268 @@ msgid_plural "%d users bookmarked"
 msgstr[0] "%d个用户已收藏"
 msgstr[1] "%d个用户已收藏"
 
-#: inc/favorite.php:160
+#: inc/favorite.php:157
 msgid "Unfollowing"
 msgstr "取消关注"
 
-#: inc/member.php:38
+#: inc/favorite.php:163
+msgid "Following"
+msgstr "加关注"
+
+#: inc/member.php:39
 msgid "%d follower"
 msgid_plural "%d followers"
 msgstr[0] "%d个关注者"
 msgstr[1] "%d个关注者"
 
-#: inc/member.php:53
+#: inc/member.php:80
 msgid "User registration is not enabled."
 msgstr "注册功能关闭。"
 
-#: inc/member.php:76 inc/member.php:244 inc/member.php:357 inc/member.php:609
+#: inc/member.php:140
+#: inc/member.php:328
+#: inc/member.php:446
+#: inc/member.php:710
 msgid "Username"
 msgstr "用户名"
 
-#: inc/member.php:78
+#: inc/member.php:142
 msgid "Use alphanumeric, _, - only. Within 4-12 characters."
 msgstr "只可使用英文字母、数字、下划线（_）和连字符（-），长度 4-12 个字符"
 
-#: inc/member.php:81 inc/member.php:361 inc/member.php:614
+#: inc/member.php:145
+#: inc/member.php:450
+#: inc/member.php:715
 msgid "Email"
 msgstr "电子邮件"
 
-#: inc/member.php:83
+#: inc/member.php:147
 msgid "Please use your real and most used email."
 msgstr "请使用真实、常用的电子邮件地址"
 
-#: inc/member.php:86 inc/member.php:248
+#: inc/member.php:150
+#: inc/member.php:332
 msgid "Password"
 msgstr "密码"
 
-#: inc/member.php:90 inc/member.php:506 inc/member.php:735
+#: inc/member.php:154
+#: inc/member.php:595
+#: inc/member.php:851
 msgid "Password Again"
 msgstr "密码确认"
 
-#: inc/member.php:96
+#: inc/member.php:161
 msgid "Create Account"
 msgstr "注册用户"
 
-#: inc/member.php:124
+#: inc/member.php:189
 msgid "Username already taken"
 msgstr "用户名已注册"
 
-#: inc/member.php:129 inc/member.php:283 inc/member.php:406
+#: inc/member.php:194
+#: inc/member.php:371
+#: inc/member.php:495
 msgid "Invalid username"
 msgstr "用户名不可用"
 
-#: inc/member.php:134
+#: inc/member.php:199
 msgid "Please enter a username"
 msgstr "请输入用户名"
 
-#: inc/member.php:189
+#: inc/member.php:204
 msgid "Username length must within 4-12 characters"
 msgstr "用户名长度必须在 4-12 个字符之内"
 
-#: inc/member.php:139
+#: inc/member.php:209
 msgid "Please enter your Email"
 msgstr "请输入电子邮件地址"
 
-#: inc/member.php:144 inc/member.php:658
+#: inc/member.php:214
+#: inc/member.php:771
 msgid "Invalid email"
 msgstr "电子邮件地址不可用"
 
-#: inc/member.php:149
+#: inc/member.php:219
 msgid "This Email already registered"
 msgstr "该电子邮件地址已被注册"
 
-#: inc/member.php:154 inc/member.php:288
+#: inc/member.php:224
+#: inc/member.php:376
 msgid "Please enter a password"
 msgstr "请输入密码"
 
-#: inc/member.php:159 inc/member.php:547 inc/member.php:783
+#: inc/member.php:229
+#: inc/member.php:636
+#: inc/member.php:899
 msgid "Passwords do not match"
 msgstr "两次输入的密码不一致"
 
-#: inc/member.php:206
+#: inc/member.php:242
 msgid "reCAPATCH is not right."
 msgstr "验证码错误"
 
-#: inc/member.php:229
+#: inc/member.php:313
 msgid "You need signin to view this page."
 msgstr "登录后才能查看该页面"
 
-#: inc/member.php:238
+#: inc/member.php:322
 msgid "Please signin with your new password."
 msgstr "请使用新密码登录。"
 
-#: inc/member.php:293
+#: inc/member.php:337
+msgid "Remeber me?"
+msgstr "记住我"
+
+#: inc/member.php:381
 msgid "Incorrect password"
 msgstr "密码错误"
 
-#: inc/member.php:347
-msgid ""
-"The reset password instructions has already sent to you email, please check "
-"you inbox and follow the instructions."
+#: inc/member.php:436
+msgid "The reset password instructions has already sent to you email, please check you inbox and follow the instructions."
 msgstr "密码重设说明已经发送到你的邮箱，请查看收件箱，按照说明操作。"
 
-#: inc/member.php:351
-msgid ""
-"Please enter the username and email you used when signup to reset your "
-"password."
+#: inc/member.php:440
+msgid "Please enter the username and email you used when signup to reset your password."
 msgstr "请输入注册时提供的用户名和电子邮件地址来重设密码。"
 
-#: inc/member.php:367
+#: inc/member.php:456
 msgid "Sent Reset Instructions"
 msgstr "发送密码重设说明"
 
-#: inc/member.php:394
+#: inc/member.php:483
 msgid "Please enter your username."
 msgstr "请输入用户名"
 
-#: inc/member.php:399 inc/member.php:653
+#: inc/member.php:488
+#: inc/member.php:766
 msgid "Please enter your email."
 msgstr "请输入电子邮件地址"
 
-#: inc/member.php:415
+#: inc/member.php:504
 msgid "This is not the email you used when signup."
 msgstr "该电子邮件地址不是注册时提供的"
 
-#: inc/member.php:422
-msgid ""
-"Your reset password instructions already sent, please check you inbox, or "
-"may be spam area."
+#: inc/member.php:511
+msgid "Your reset password instructions already sent, please check you inbox, or may be spam area."
 msgstr "重设密码的说明邮件已经发送了，请查看收件箱，或者垃圾箱。"
 
-#: inc/member.php:433
+#: inc/member.php:522
 msgid "Someone requested that the password be reset for the following account:"
 msgstr "有人请求对以下用户进行密码重设："
 
-#: inc/member.php:435
+#: inc/member.php:524
 msgid "Username: %s"
 msgstr "用户名：%s"
 
-#: inc/member.php:436
+#: inc/member.php:525
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr "如果这只是一个误操作，请忽略该邮件。"
 
-#: inc/member.php:437
+#: inc/member.php:526
 msgid "To reset your password, visit the following address:"
 msgstr "重设密码，请访问以下地址："
 
-#: inc/member.php:441
+#: inc/member.php:530
 msgid "[%s] Password Reset"
 msgstr "[%s]密码重设"
 
-#: inc/member.php:444
+#: inc/member.php:533
 msgid "The e-mail could not be sent."
 msgstr "电子邮件无法发送。"
 
-#: inc/member.php:444
+#: inc/member.php:533
 msgid "Possible reason: your host may have disabled the mail() function..."
 msgstr "可能的原因：你的服务器不支持 mail() 函数⋯⋯"
 
-#: inc/member.php:474
+#: inc/member.php:563
 msgid "Please do not cheating me."
 msgstr "请不要耍我。"
 
-#: inc/member.php:480
+#: inc/member.php:569
 msgid "You don't have permission to view this page."
 msgstr "您无权查看此页面。"
 
-#: inc/member.php:497
+#: inc/member.php:586
 msgid "Please enter your new password and confirm it to reset your password."
 msgstr "请输入一个新密码并确认。"
 
-#: inc/member.php:502 inc/member.php:731
+#: inc/member.php:591
+#: inc/member.php:847
 msgid "New Password"
 msgstr "新密码"
 
-#: inc/member.php:537 inc/member.php:768
+#: inc/member.php:601
+msgid "Reset Password"
+msgstr "重设密码"
+
+#: inc/member.php:626
+#: inc/member.php:884
 msgid "Please enter your new password."
 msgstr "请输入一个新密码"
 
-#: inc/member.php:542 inc/member.php:773
+#: inc/member.php:631
+#: inc/member.php:889
 msgid "Please retype your new password."
 msgstr "请确认你的新密码"
 
-#: inc/member.php:601
+#: inc/member.php:702
 msgid "Your settings is updated"
 msgstr "设置已更新"
 
-#: inc/member.php:611
+#: inc/member.php:712
 msgid "Username cannot be changed."
 msgstr "用户名无法修改"
 
-#: inc/member.php:618
+#: inc/member.php:719
 msgid "Website"
 msgstr "个人站点"
 
-#: inc/member.php:622
-msgid "Biographical Info"
-msgstr "自我介绍"
-
-#: inc/member.php:626
-msgid "Languange"
-msgstr "语言"
-
-#: inc/member.php:628
-msgid "Update Settings"
-msgstr "更新设置"
-
-#: inc/member.php:668
-msgid "This Email already used by another user"
-msgstr "该电子邮件已被其他用户使用"
-
-#: inc/member.php:708
+#: inc/member.php:725
 msgid "Don't include the @."
 msgstr "请勿包含 @"
 
-#: inc/member.php:720
-msgid ""
-"Your password is changed, and your are now signed in with your new password."
+#: inc/member.php:728
+msgid "Biographical Info"
+msgstr "自我介绍"
+
+#: inc/member.php:732
+msgid "Languange"
+msgstr "语言"
+
+#: inc/member.php:738
+msgid "Update Settings"
+msgstr "更新设置"
+
+#: inc/member.php:781
+msgid "This Email already used by another user"
+msgstr "该电子邮件已被其他用户使用"
+
+#: inc/member.php:836
+msgid "Your password is changed, and your are now signed in with your new password."
 msgstr "密码已修改，现在你已经使用新密码登录。"
 
-#: inc/member.php:723
-msgid ""
-"If you don't want to change password, please don't enter either of the three "
-"fields following."
+#: inc/member.php:839
+msgid "If you don't want to change password, please don't enter either of the three fields following."
 msgstr "如不想修改密码，请留空下列各项。"
 
-#: inc/member.php:727
+#: inc/member.php:843
 msgid "Current Password"
 msgstr "当前密码"
 
-#: inc/member.php:741 page-settings.php:40
+#: inc/member.php:857
+#: page-settings.php:40
 msgid "Change Password"
 msgstr "修改密码"
 
-#: inc/member.php:763
+#: inc/member.php:879
 msgid "Please enter your current password"
 msgstr "请输入你的当前密码"
 
-#: inc/member.php:778
+#: inc/member.php:894
 msgid "Please user a password different from current one."
 msgstr "请使用一个不同于当前密码的新密码"
 
-#: inc/member.php:852
+#: inc/member.php:968
 msgid "Forgot password?"
 msgstr "忘记密码？"
 
@@ -662,7 +693,8 @@ msgstr "一般设置"
 msgid "Webmaster Tools Settings"
 msgstr "站长工具设置"
 
-#: inc/theme-options.php:40 inc/theme-options.php:91
+#: inc/theme-options.php:40
+#: inc/theme-options.php:91
 msgid "V2Press Options"
 msgstr "V2Press 设置"
 
@@ -698,11 +730,27 @@ msgstr "区域名称"
 msgid "Please enter section names, delimited with commas(,)."
 msgstr "请输入区域名称，使用英文逗号（,）分隔。"
 
-#: inc/theme-options.php:288
+#: inc/theme-options.php:294
+msgid "reCAPTCHA Public Key"
+msgstr "reCAPTCHA 公匙"
+
+#: inc/theme-options.php:295
+msgid "Please enter reCAPTCHA public key."
+msgstr "请填写 reCAPTCHA 公匙"
+
+#: inc/theme-options.php:302
+msgid "reCAPTCHA Private Key"
+msgstr "reCAPTCHA 密匙"
+
+#: inc/theme-options.php:303
+msgid "Please enter reCAPTCHA private key."
+msgstr "请填写 reCAPTCHA 密匙"
+
+#: inc/theme-options.php:311
 msgid "Google Webmaster Verfify"
 msgstr "Google 网站管理员验证码"
 
-#: inc/theme-options.php:289
+#: inc/theme-options.php:312
 msgid "Enter the meta tag value gives in the Webmaster Verify Ownership step."
 msgstr "填入验证网络管理员一步中 Google 提供的 mata 值。"
 
@@ -792,7 +840,7 @@ msgstr[1] "<span>%d</span> 话题收藏"
 msgid "<span>%d</span> Following"
 msgstr "<span>%d</span> 特别关注"
 
-#: sidebar.php:23
+#: sidebar.php:26
 msgid "Already signup? %s"
 msgstr "已注册用户请%s"
 
@@ -814,3 +862,6 @@ msgstr "The theme kit for v2press."
 #. Author of the plugin/theme
 msgid "Andor Chen"
 msgstr "Andor Chen"
+
+#~ msgid "Reply <span>&darr;</span>"
+#~ msgstr "回复 <span>&darr;</span>"
