@@ -92,7 +92,7 @@ add_shortcode( 'vp-signup-form', 'vp_signup_form' );
  */
 function vp_recaptcha_field() {
   require_once( VP_LIBS_PATH . '/recaptchalib.php' );
-  $publickey = "6LeIKM0SAAAAALmomciSzl1AQhI1pd_LUdWdr6T9";
+  $publickey = vp_get_theme_option( 'recaptcha_publickey' );
     
   $lang = str_replace( '_', '-', get_locale() );
   
@@ -105,6 +105,21 @@ function vp_recaptcha_field() {
 </script>
 reTHEME;
   echo $custom . recaptcha_get_html($publickey);
+}
+
+/**
+ * If reCAPTCHA enabled.
+ *
+ * @since 0.0.2
+ */
+function vp_is_recaptcha_enabled() {
+  $pubkey = vp_get_theme_option( 'recaptcha_publickey' );
+  $privkey = vp_get_theme_option( 'recaptcha_privatekey' );
+  
+  if ( empty( $pubkey ) || empty( $privkey ) )
+    return false;
+  
+  return true;
 }
 
 /**
@@ -123,12 +138,12 @@ function vp_signup_form_fields() {
 	<fieldset>
 		<p>
 			<label for="vp_user_login"><?php _e( 'Username', 'v2press' ); ?></label>
-			<input type="text" name="vp_user_login" id="vp_user_login" class="form-field required" value="<?php echo $_POST['vp_user_login'] ?>" />
+			<input type="text" name="vp_user_login" id="vp_user_login" class="form-field required" value="" />
 			<span class="field-helper"><?php _e( 'Use alphanumeric, _, - only. Within 4-12 characters.', 'v2press' ); ?></span>
 		</p>
 		<p>
 			<label for="vp_user_email"><?php _e( 'Email', 'v2press' ); ?></label>
-			<input type="email" name="vp_user_email" id="vp_user_email" class="form-field required" value="<?php echo $_POST['vp_user_email'] ?>" />
+			<input type="email" name="vp_user_email" id="vp_user_email" class="form-field required" value="" />
 			<span class="field-helper"><?php _e( 'Please use your real and most used email.', 'v2press' ); ?></span>
 		</p>
 		<p>
@@ -139,7 +154,7 @@ function vp_signup_form_fields() {
 			<label for="vp_user_password_confirmation"><?php _e( 'Password Again', 'v2press' ); ?></label>
 			<input type="password" autocomplete="off" name="vp_user_password_confirmation" id="vp_user_password_confirmation" class="form-field required" />
 		</p>
-		<?php vp_recaptcha_field(); ?>
+		<?php if ( vp_is_recaptcha_enabled() ) vp_recaptcha_field(); ?>
 		<p>
 			<input type="hidden" name="vp_signup_nonce" value="<?php echo wp_create_nonce( 'vp-signup-nonce' ); ?>" />
 			<input type="hidden" name="action" value="vp_signup" />
@@ -215,15 +230,17 @@ function vp_do_signup() {
 		}
 		
 		// reCAPTCHA error
-		require_once( VP_LIBS_PATH . '/recaptchalib.php' );
-		$privatekey = "6LeIKM0SAAAAAHe216bBiA8qWyDOgvIcCifUysM7";
-		$resp = recaptcha_check_answer( $privatekey,
+		if ( vp_is_recaptcha_enabled() ) {
+		  require_once( VP_LIBS_PATH . '/recaptchalib.php' );
+		  $privatekey = vp_get_theme_option( 'recaptcha_privatekey' );
+		  $resp = recaptcha_check_answer( $privatekey,
 		                                $_SERVER["REMOTE_ADDR"],
 		                                $_POST["recaptcha_challenge_field"],
 		                                $_POST["recaptcha_response_field"] );
 		
-		if ( !$resp->is_valid ) {
-		  vp_errors()->add( 'recaptcha-error', __( 'reCAPATCH is not right.', 'v2press' ) );
+		  if ( !$resp->is_valid ) {
+		    vp_errors()->add( 'recaptcha-error', __( 'reCAPATCH is not right.', 'v2press' ) );
+		  }
 		}
  
 		$errors = vp_errors()->get_error_messages();
@@ -289,7 +306,7 @@ function vp_signin_form_fields() {
 	
 	vp_error_messages();
 	
-	$redirect_to = $_REQUEST['redirect_to'];
+	if ( isset( $_REQUEST['redirect_to'] ) )$redirect_to = $_REQUEST['redirect_to'];
 	if ( !empty( $redirect_to ) ) :
 ?>
 <div class="form-message alert">
@@ -298,7 +315,7 @@ function vp_signin_form_fields() {
 <?php 
   endif;
   
-  $from = $_REQUEST['from'];
+  if ( isset( $_REQUEST['from'] ) ) $from = $_REQUEST['from'];
   if ( !empty( $from ) && ( 'rp' == $from ) ) :
 ?>
 <div class="form-message info">
@@ -347,7 +364,7 @@ function vp_do_signin() {
 	if( isset( $_POST['vp_user_login'] )
 	    && wp_verify_nonce( $_POST['vp_signin_nonce'], 'vp-signin-nonce') ) {
  
-		$user = get_userdatabylogin( sanitize_user( $_POST['vp_user_login'] ) );
+		$user = get_user_by( 'login', sanitize_user( $_POST['vp_user_login'] ) );
 		
 		// User not exists
 		if( !$user ) {
@@ -372,7 +389,7 @@ function vp_do_signin() {
 			wp_set_current_user( $user->ID, $_POST['vp_user_login'] );	
 			do_action( 'wp_login', $_POST['vp_user_login'] );
  
-      $redirect_to = $_POST['redirect_to'];
+      if ( isset( $_POST['redirect_to'] ) ) $redirect_to = $_POST['redirect_to'];
 			if ( !empty( $redirect_to ) ) {
 			  wp_safe_redirect( $redirect_to );
 			} else {

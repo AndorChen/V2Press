@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v2press\n"
-"POT-Creation-Date: 2012-02-14 04:31:56+00:00\n"
+"POT-Creation-Date: 2012-02-16 16:27:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -202,7 +202,7 @@ msgctxt "menu"
 msgid "Home"
 msgstr ""
 
-#: header.php:36 inc/member.php:328 sidebar.php:26
+#: header.php:36 inc/member.php:345 sidebar.php:26
 msgid "Signin"
 msgstr ""
 
@@ -269,15 +269,15 @@ msgstr ""
 msgid "Please select what section this category belongs to."
 msgstr ""
 
-#: inc/custom-category.php:177
+#: inc/custom-category.php:178
 msgid "None"
 msgstr ""
 
-#: inc/custom-category.php:228
+#: inc/custom-category.php:229
 msgid "No sections yet."
 msgstr ""
 
-#: inc/custom-category.php:238
+#: inc/custom-category.php:239
 msgid "No nodes yet."
 msgstr ""
 
@@ -297,7 +297,7 @@ msgstr ""
 msgid "Add Reply"
 msgstr ""
 
-#: inc/custom-comment.php:196
+#: inc/custom-comment.php:197
 msgid ""
 "Please avoid posting pointless replies, it's always great to save everyone's "
 "precious time."
@@ -331,11 +331,11 @@ msgstr ""
 msgid "Please select a node"
 msgstr ""
 
-#: inc/custom-post.php:230 inc/custom-post.php:363
+#: inc/custom-post.php:230 inc/custom-post.php:362
 msgid "Please enter the topic title"
 msgstr ""
 
-#: inc/custom-post.php:235 inc/custom-post.php:368
+#: inc/custom-post.php:235 inc/custom-post.php:367
 msgid "Please write something useful"
 msgstr ""
 
@@ -343,11 +343,11 @@ msgstr ""
 msgid "edit"
 msgstr ""
 
-#: inc/custom-post.php:318
+#: inc/custom-post.php:317
 msgid "You cannot edt this topic 15 minites after created."
 msgstr ""
 
-#: inc/custom-post.php:339
+#: inc/custom-post.php:338
 msgid "Submit Changes"
 msgstr ""
 
@@ -391,11 +391,11 @@ msgid_plural "%d users bookmarked"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/favorite.php:153
+#: inc/favorite.php:157
 msgid "Unfollowing"
 msgstr ""
 
-#: inc/favorite.php:159
+#: inc/favorite.php:163
 msgid "Following"
 msgstr ""
 
@@ -409,240 +409,240 @@ msgstr[1] ""
 msgid "User registration is not enabled."
 msgstr ""
 
-#: inc/member.php:125 inc/member.php:311 inc/member.php:429 inc/member.php:693
+#: inc/member.php:140 inc/member.php:328 inc/member.php:446 inc/member.php:710
 msgid "Username"
 msgstr ""
 
-#: inc/member.php:127
+#: inc/member.php:142
 msgid "Use alphanumeric, _, - only. Within 4-12 characters."
 msgstr ""
 
-#: inc/member.php:130 inc/member.php:433 inc/member.php:698
+#: inc/member.php:145 inc/member.php:450 inc/member.php:715
 msgid "Email"
 msgstr ""
 
-#: inc/member.php:132
+#: inc/member.php:147
 msgid "Please use your real and most used email."
 msgstr ""
 
-#: inc/member.php:135 inc/member.php:315
+#: inc/member.php:150 inc/member.php:332
 msgid "Password"
 msgstr ""
 
-#: inc/member.php:139 inc/member.php:578 inc/member.php:834
+#: inc/member.php:154 inc/member.php:595 inc/member.php:851
 msgid "Password Again"
 msgstr ""
 
-#: inc/member.php:146
+#: inc/member.php:161
 msgid "Create Account"
 msgstr ""
 
-#: inc/member.php:174
+#: inc/member.php:189
 msgid "Username already taken"
 msgstr ""
 
-#: inc/member.php:179 inc/member.php:354 inc/member.php:478
+#: inc/member.php:194 inc/member.php:371 inc/member.php:495
 msgid "Invalid username"
 msgstr ""
 
-#: inc/member.php:184
+#: inc/member.php:199
 msgid "Please enter a username"
 msgstr ""
 
-#: inc/member.php:189
+#: inc/member.php:204
 msgid "Username length must within 4-12 characters"
 msgstr ""
 
-#: inc/member.php:194
+#: inc/member.php:209
 msgid "Please enter your Email"
 msgstr ""
 
-#: inc/member.php:199 inc/member.php:754
+#: inc/member.php:214 inc/member.php:771
 msgid "Invalid email"
 msgstr ""
 
-#: inc/member.php:204
+#: inc/member.php:219
 msgid "This Email already registered"
 msgstr ""
 
-#: inc/member.php:209 inc/member.php:359
+#: inc/member.php:224 inc/member.php:376
 msgid "Please enter a password"
 msgstr ""
 
-#: inc/member.php:214 inc/member.php:619 inc/member.php:882
+#: inc/member.php:229 inc/member.php:636 inc/member.php:899
 msgid "Passwords do not match"
 msgstr ""
 
-#: inc/member.php:226
+#: inc/member.php:242
 msgid "reCAPATCH is not right."
 msgstr ""
 
-#: inc/member.php:296
+#: inc/member.php:313
 msgid "You need signin to view this page."
 msgstr ""
 
-#: inc/member.php:305
+#: inc/member.php:322
 msgid "Please signin with your new password."
 msgstr ""
 
-#: inc/member.php:320
+#: inc/member.php:337
 msgid "Remeber me?"
 msgstr ""
 
-#: inc/member.php:364
+#: inc/member.php:381
 msgid "Incorrect password"
 msgstr ""
 
-#: inc/member.php:419
+#: inc/member.php:436
 msgid ""
 "The reset password instructions has already sent to you email, please check "
 "you inbox and follow the instructions."
 msgstr ""
 
-#: inc/member.php:423
+#: inc/member.php:440
 msgid ""
 "Please enter the username and email you used when signup to reset your "
 "password."
 msgstr ""
 
-#: inc/member.php:439
+#: inc/member.php:456
 msgid "Sent Reset Instructions"
 msgstr ""
 
-#: inc/member.php:466
+#: inc/member.php:483
 msgid "Please enter your username."
 msgstr ""
 
-#: inc/member.php:471 inc/member.php:749
+#: inc/member.php:488 inc/member.php:766
 msgid "Please enter your email."
 msgstr ""
 
-#: inc/member.php:487
+#: inc/member.php:504
 msgid "This is not the email you used when signup."
 msgstr ""
 
-#: inc/member.php:494
+#: inc/member.php:511
 msgid ""
 "Your reset password instructions already sent, please check you inbox, or "
 "may be spam area."
 msgstr ""
 
-#: inc/member.php:505
+#: inc/member.php:522
 msgid "Someone requested that the password be reset for the following account:"
 msgstr ""
 
-#: inc/member.php:507
+#: inc/member.php:524
 msgid "Username: %s"
 msgstr ""
 
-#: inc/member.php:508
+#: inc/member.php:525
 msgid "If this was a mistake, just ignore this email and nothing will happen."
 msgstr ""
 
-#: inc/member.php:509
+#: inc/member.php:526
 msgid "To reset your password, visit the following address:"
 msgstr ""
 
-#: inc/member.php:513
+#: inc/member.php:530
 msgid "[%s] Password Reset"
 msgstr ""
 
-#: inc/member.php:516
+#: inc/member.php:533
 msgid "The e-mail could not be sent."
 msgstr ""
 
-#: inc/member.php:516
+#: inc/member.php:533
 msgid "Possible reason: your host may have disabled the mail() function..."
 msgstr ""
 
-#: inc/member.php:546
+#: inc/member.php:563
 msgid "Please do not cheating me."
 msgstr ""
 
-#: inc/member.php:552
+#: inc/member.php:569
 msgid "You don't have permission to view this page."
 msgstr ""
 
-#: inc/member.php:569
+#: inc/member.php:586
 msgid "Please enter your new password and confirm it to reset your password."
 msgstr ""
 
-#: inc/member.php:574 inc/member.php:830
+#: inc/member.php:591 inc/member.php:847
 msgid "New Password"
 msgstr ""
 
-#: inc/member.php:584
+#: inc/member.php:601
 msgid "Reset Password"
 msgstr ""
 
-#: inc/member.php:609 inc/member.php:867
+#: inc/member.php:626 inc/member.php:884
 msgid "Please enter your new password."
 msgstr ""
 
-#: inc/member.php:614 inc/member.php:872
+#: inc/member.php:631 inc/member.php:889
 msgid "Please retype your new password."
 msgstr ""
 
-#: inc/member.php:685
+#: inc/member.php:702
 msgid "Your settings is updated"
 msgstr ""
 
-#: inc/member.php:695
+#: inc/member.php:712
 msgid "Username cannot be changed."
 msgstr ""
 
-#: inc/member.php:702
+#: inc/member.php:719
 msgid "Website"
 msgstr ""
 
-#: inc/member.php:708
+#: inc/member.php:725
 msgid "Don't include the @."
 msgstr ""
 
-#: inc/member.php:711
+#: inc/member.php:728
 msgid "Biographical Info"
 msgstr ""
 
-#: inc/member.php:715
+#: inc/member.php:732
 msgid "Languange"
 msgstr ""
 
-#: inc/member.php:721
+#: inc/member.php:738
 msgid "Update Settings"
 msgstr ""
 
-#: inc/member.php:764
+#: inc/member.php:781
 msgid "This Email already used by another user"
 msgstr ""
 
-#: inc/member.php:819
+#: inc/member.php:836
 msgid ""
 "Your password is changed, and your are now signed in with your new password."
 msgstr ""
 
-#: inc/member.php:822
+#: inc/member.php:839
 msgid ""
 "If you don't want to change password, please don't enter either of the three "
 "fields following."
 msgstr ""
 
-#: inc/member.php:826
+#: inc/member.php:843
 msgid "Current Password"
 msgstr ""
 
-#: inc/member.php:840 page-settings.php:40
+#: inc/member.php:857 page-settings.php:40
 msgid "Change Password"
 msgstr ""
 
-#: inc/member.php:862
+#: inc/member.php:879
 msgid "Please enter your current password"
 msgstr ""
 
-#: inc/member.php:877
+#: inc/member.php:894
 msgid "Please user a password different from current one."
 msgstr ""
 
-#: inc/member.php:951
+#: inc/member.php:968
 msgid "Forgot password?"
 msgstr ""
 
@@ -709,11 +709,27 @@ msgstr ""
 msgid "Please enter section names, delimited with commas(,)."
 msgstr ""
 
-#: inc/theme-options.php:288
+#: inc/theme-options.php:294
+msgid "reCAPTCHA Public Key"
+msgstr ""
+
+#: inc/theme-options.php:295
+msgid "Please enter reCAPTCHA public key."
+msgstr ""
+
+#: inc/theme-options.php:302
+msgid "reCAPTCHA Private Key"
+msgstr ""
+
+#: inc/theme-options.php:303
+msgid "Please enter reCAPTCHA private key."
+msgstr ""
+
+#: inc/theme-options.php:311
 msgid "Google Webmaster Verfify"
 msgstr ""
 
-#: inc/theme-options.php:289
+#: inc/theme-options.php:312
 msgid "Enter the meta tag value gives in the Webmaster Verify Ownership step."
 msgstr ""
 
