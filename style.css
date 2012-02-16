@@ -22,7 +22,7 @@ audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 :-moz-placeholder { color: #ccc; }
 ::-webkit-input-placeholder { color: #ccc; }
-.placeholder { color: #ccc; }
+.placeholder { color: #ccc!important; }
 
 
 /* =======
