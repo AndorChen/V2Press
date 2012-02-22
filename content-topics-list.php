@@ -5,9 +5,9 @@
  * @since 0.0.1
  */
 ?>
-<div id="topic-<?php the_ID(); ?>" <?php post_class('inner'); ?>>
+<div id="topic-<?php the_ID(); ?>" <?php post_class( 'inner' ); ?>>
   <?php vp_the_author_avatar_link(); ?>          
-  <div class="comments-link f-right">
+  <div class="comments-link">
     <?php vp_comments_link(); ?>
   </div>
   <h2 class="topic-title"><a href="<?php vp_the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>

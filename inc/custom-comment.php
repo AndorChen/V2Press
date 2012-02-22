@@ -45,6 +45,7 @@ function vp_comments_link() {
   $output = '<a href="' . vp_get_permalink( $id ) . '">' . $num . '</a>';
   echo $output;
 }
+
 /**
  * Custom the comments list.
  *

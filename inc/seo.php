@@ -112,7 +112,7 @@ add_action( 'wp_head', 'vp_description' );
 function vp_verify_google_webmaster() {
 	$verify = vp_get_theme_option( 'google-webmaster-verify' );
 	
-	if ( !$verify )
+	if ( empty( $verify ) )
 		return;
 	
 	echo $verify;

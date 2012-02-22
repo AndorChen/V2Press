@@ -6,14 +6,14 @@
  *
  * @since 0.0.1
  */
+
 if ( !is_user_logged_in() )
   auth_redirect();
 
-$user = wp_get_current_user();
-$bookmarked = (array) get_user_meta( $user->ID, 'v2press_i_bookmarked_topics', true );
-if ( '' == $bookmarked[0] ) {
+$user_id = get_current_user_id();
+$bookmarked = get_user_meta( $user_id, 'v2press_i_bookmarked_topics', true );
+if ( !is_array( $bookmarked) )
   $bookmarked = array();
-}
 $count = count( $bookmarked );
 
 get_header(); ?>
@@ -31,7 +31,7 @@ get_header(); ?>
           ?>
             <ul class="zebra-topics-list">
               <?php while ( $bm_query->have_posts() ) : $bm_query->the_post(); $i++; ?>
-              <li id="topic-<?php the_ID(); ?>"<?php if ( 0 == $i%2) echo ' class="alt"'; ?>><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></li>
+              <li id="topic-<?php the_ID(); ?>"<?php if ( 0 == $i%2 ) echo ' class="alt"'; ?>><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></li>
               <?php endwhile; ?>
             </ul>
             <?php endif; // END if $bm_query->have_posts() ?>

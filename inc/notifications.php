@@ -12,8 +12,8 @@
  */
 function vp_notifications_list() {
   $user_id = get_current_user_id();
-  $notifications = (array) get_user_meta( $user_id, 'v2press_notifications', true );
-  if ( '' == $notifications[0] )
+  $notifications = get_user_meta( $user_id, 'v2press_notifications', true );
+  if ( !is_array( $notifications ) || empty( $notifications ) )
     $notifications = array();
 
   $notifications = array_reverse( $notifications );
@@ -68,8 +68,8 @@ function vp_push_notify( $comment_ID ) {
   if ( $comment->user_id == $parent_user_id )
     return;
 
-  $notifications = (array) get_user_meta( $parent_user_id, 'v2press_notifications', true );
-  if ( '' == $notifications[0] )
+  $notifications = get_user_meta( $parent_user_id, 'v2press_notifications', true );
+  if ( !is_array( $notifications ) || empty( $notifications ) )
     $notifications = array();
 
   $notifications[] = $comment_ID;

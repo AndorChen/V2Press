@@ -3,12 +3,10 @@
  * Template Name: Need Signin
  *
  * This page template is used when the page is need signin to view.
- * For example, the user settings page.
  *
  * @since 0.0.1
  */
 
-// Weird auth_redirect behaviour hack
 if ( !is_user_logged_in() )
   auth_redirect();
 

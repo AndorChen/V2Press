@@ -174,7 +174,7 @@ function vp_create_page( $slug, $option, $page_title = '', $page_content = '', $
 
   $page_id = wp_insert_post( $page_data );
 
-  if ( '' != $page_template ) {
+  if ( !empty( $page_template ) ) {
     update_post_meta( $page_id, '_wp_page_template', $page_template );
   }
 

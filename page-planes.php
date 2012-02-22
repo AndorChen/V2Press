@@ -1,10 +1,12 @@
 <?php
 /**
  * Template Name: Planes
- * This page template is only used for all nodes display page.
+ *
+ * This page template is only used for Planes page.
  *
  * @since 0.0.1
  */
+
 get_header(); ?>
     
       <div id="main">

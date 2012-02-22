@@ -104,6 +104,8 @@ function vp_breadcrumb( $sep = ' &#155; ') {
     $output .= $curauth->user_login;
   } elseif ( is_search() ) {
     $output .= sprintf( __( 'Search results for "%s"', 'v2press' ), get_search_query() );
+  } else if ( is_404() ) {
+    $output .= __( 'Not Found', 'v2press' );
   }
 
   echo $output;

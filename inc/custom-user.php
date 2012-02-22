@@ -36,11 +36,11 @@ function vp_get_user_profile_link( $user_id = false) {
   if ( ! $user_id ) {
     $user_id = get_current_user_id();
   } else {
-    $user_id = (int) $user_id;
+    $user_id = absint( $user_id );
   }
 
   $profile_url = get_author_posts_url( $user_id );
-  $user_login = get_userdata( $user_id )->user_login;
+  $user_login = get_user_by( 'id', $user_id )->user_login;
 
   $output = '<a href="' . $profile_url . '">' . $user_login . '</a>';
 
@@ -66,10 +66,10 @@ function vp_user_avatar_link( $size = 48, $user_id = false) {
  * @return string The user's profile avatar link, if no $user_id the current user's.
  */
 function vp_get_user_avatar_link( $size = 48, $user_id = false) {
-  if ( ! $user_id ) {
+  if ( !$user_id ) {
     $user_id = get_current_user_id();
   } else {
-    $user_id = (int) $user_id;
+    $user_id = absint( $user_id );
   }
 
   $profile_url = get_author_posts_url( $user_id );
@@ -77,5 +77,5 @@ function vp_get_user_avatar_link( $size = 48, $user_id = false) {
   $default_avatar = get_template_directory_uri() . '/images/default-avatar-' . $size . '.png';
   $avatar = get_avatar( $user_id, $size, $default_avatar );
 
-  return '<a href="' . $profile_url . '">' . $avatar . '</a>';
+  return '<a class="avatar-link" href="' . $profile_url . '">' . $avatar . '</a>';
 }

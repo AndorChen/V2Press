@@ -1,10 +1,11 @@
 <?php
 /**
- * This file is author page template.
+ * Buildin author page template, for V2Press used for '/member/Andor'.
  *
  * @since 0.0.1
  */
-$user = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+
+$user = get_user_by( 'slug', get_query_var( 'author_name' ) );
 get_header();
 ?>    
       <div id="main">
@@ -39,7 +40,7 @@ get_header();
             <?php
               while ( $member_recent_topics->have_posts() ) : $member_recent_topics->the_post(); $i++;
             ?>
-              <li id="topic-<?php the_ID(); ?>"<?php if ( 0 == $i%2) echo ' class="alt"'; ?>><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></li>
+              <li id="topic-<?php the_ID(); ?>"<?php if ( 0 == $i%2 ) echo ' class="alt"'; ?>><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a></li>
             <?php endwhile; ?>
             </ul>
           <?php else: ?>
