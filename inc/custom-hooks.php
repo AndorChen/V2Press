@@ -25,11 +25,14 @@ add_filter( 'pre_comment_content', 'Markdown', 6 );
 add_filter( 'get_comment_text',    'Markdown', 6 );
 add_filter( 'get_comment_excerpt', 'Markdown', 6 );
 
+
 /* =============================================================================
  * Do not need these in head.
  *
  * @since 0.0.1
  ============================================================================ */
+
+remove_action( 'wp_head', 'wp_generator' );
 remove_action( 'wp_head', 'rel_canonical' );
 remove_action( 'wp_head', 'rsd_link' );
 remove_action( 'wp_head', 'wlwmanifest_link' );

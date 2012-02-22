@@ -1,10 +1,10 @@
 /*
 Theme Name: v2press
 Theme URI: http://about.ac/
-Description: The theme kit for v2press.
+Description: Turn your WordPress into a light and clean forum.
 Author: Andor Chen
 Author URI: http://about.ac/
-Version: 0.0.1
+Version: 0.0.2
 */
 
 * {
@@ -351,9 +351,12 @@ td { vertical-align: top; }
   border-bottom: 1px solid #e2e2e2;
   padding-left: 68px;
 }
-.topics-list .avatar {
+.topics-list .avatar-link {
   float: left;
   margin: 0 0 0 -58px;
+}
+.topics-list .comments-link {
+  float: right;
 }
 .topics-list .comments-link a {
   background: #aab0c6;
@@ -440,7 +443,7 @@ a.notification-delete:hover, a.notification-delete:active{
 #single-topic-box .topic-title {
   font-size: 20px;
 }
-#single-topic-box .avatar {
+#single-topic-box .avatar-link {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -572,7 +575,7 @@ a.notification-delete:hover, a.notification-delete:active{
   position: relative;
   min-height: 72px;
 }
-#member-info .avatar {
+#member-info .avatar-link {
   position: absolute;
   left: 10px;
   top: 10px;
@@ -619,7 +622,7 @@ a.notification-delete:hover, a.notification-delete:active{
 }
 
 /* Following Page */
-#following-page-box .avatar {
+#following-page-box .avatar-link {
   margin: 0 10px 10px 0;
 }
 
@@ -632,7 +635,7 @@ a.notification-delete:hover, a.notification-delete:active{
   padding: 0 50px 0 34px;
   position: relative;
 }
-.notification-item .avatar {
+.notification-item .avatar-link {
   float: left;
   margin-left: -34px;
 }
@@ -722,7 +725,7 @@ li.comment {
 }
 
 /* User Panel */
-#user-panel .avatar {
+#user-panel .avatar-link {
   margin-right: 10px;
 }
 #favorites ul {

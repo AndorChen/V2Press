@@ -1,9 +1,10 @@
 <?php
 /**
- * This file is node topics list template.
+ * Node topics list template.
  *
  * @since 0.0.1
  */
+
 get_header(); ?>
     
       <div id="main">

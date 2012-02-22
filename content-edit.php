@@ -5,10 +5,10 @@
  * @since 0.0.1
  */
 
-$topic_id = get_query_var( 'p' );
+$topic_id = absint( get_query_var( 'p' ) );
 
-// Topic not exists
-if ( !$topic_id ) {
+// Topic id not supplied
+if ( empty( $topic_id ) ) {
   wp_redirect( home_url() );
   exit;
 }
@@ -18,7 +18,7 @@ if ( !is_user_logged_in() ) {
   auth_redirect();
 }
 
-// You cannot edit this topic
+// You have no capability to edit this topic
 if ( !current_user_can( 'edit_post', $topic_id ) ) {
   wp_redirect( home_url() );
   exit;

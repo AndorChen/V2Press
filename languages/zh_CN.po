@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: v2press 0.0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/v2press\n"
-"POT-Creation-Date: 2012-02-16 16:27:00+00:00\n"
-"PO-Revision-Date: 2012-02-17 00:33+0830\n"
+"POT-Creation-Date: 2012-02-22 11:29:36+00:00\n"
+"PO-Revision-Date: 2012-02-22 19:32+0830\n"
 "Last-Translator: Andor Chen <andor.chen.27@gmail.com>\n"
 "Language-Team: V2Press.com <v2press.com@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,23 +16,27 @@ msgstr ""
 "X-Poedit-Country: CHINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: author.php:16
+#: 404.php:16
+msgid "Sorry, not found what you were looking for."
+msgstr "抱歉，未找到你要查看的内容"
+
+#: author.php:17
 msgid "(This is you!)"
 msgstr "（这是你自己）"
 
-#: author.php:18
+#: author.php:19
 msgid "Member %s, created at %s."
 msgstr "第%s号会员，创建于%s"
 
-#: author.php:30
+#: author.php:31
 msgid "Member Recent Topics"
 msgstr "最新发表的话题"
 
-#: author.php:46
+#: author.php:47
 msgid "No topics created by this member."
 msgstr "还没有发表话题呢"
 
-#: author.php:50
+#: author.php:51
 msgid "Created %s topics in total."
 msgstr "共发表了%s个话题"
 
@@ -193,11 +197,11 @@ msgstr "由 WordPress 和“爱”强力驱动。"
 msgid "Some rights reserved."
 msgstr "保留部分权利。"
 
-#: functions.php:69
+#: functions.php:62
 msgid "Footer Navigation"
 msgstr "底部导航"
 
-#: functions.php:85
+#: functions.php:91
 msgid "One reply a time please! Replace the previous one?"
 msgstr "一次只可回复一个用户！覆盖前一个回复？"
 
@@ -282,11 +286,11 @@ msgstr "请选择该分类所属的区域。"
 msgid "None"
 msgstr "未分区"
 
-#: inc/custom-category.php:229
+#: inc/custom-category.php:234
 msgid "No sections yet."
 msgstr "还未建立任何节点区域"
 
-#: inc/custom-category.php:239
+#: inc/custom-category.php:244
 msgid "No nodes yet."
 msgstr "本区域还没有节点"
 
@@ -311,6 +315,7 @@ msgid "Please avoid posting pointless replies, it's always great to save everyon
 msgstr "请认真考虑自己的回复能够如何帮助到别人。这里不欢迎无意义的“顶”，“沙发”，“不懂”，“楼主火星了”。"
 
 #: inc/custom-page.php:100
+#: inc/custom-template-tags.php:108
 msgid "Not Found"
 msgstr "未找到"
 
@@ -373,39 +378,39 @@ msgstr "编辑\"%s\""
 msgid "Search results for \"%s\""
 msgstr "\"%s\" 的搜索结果"
 
-#: inc/custom-template-tags.php:131
+#: inc/custom-template-tags.php:133
 msgid "%d topic"
 msgid_plural "%d topics"
 msgstr[0] "%d个话题"
 msgstr[1] "%d个话题"
 
-#: inc/custom-template-tags.php:132
+#: inc/custom-template-tags.php:134
 msgid "&laquo; Previous"
 msgstr "&laquo; 上一页"
 
-#: inc/custom-template-tags.php:133
+#: inc/custom-template-tags.php:135
 msgid "Next &raquo;"
 msgstr "下一页 &raquo;"
 
-#: inc/favorite.php:37
+#: inc/favorite.php:36
 msgid "Remove from Bookmark"
 msgstr "取消收藏"
 
-#: inc/favorite.php:40
+#: inc/favorite.php:39
 msgid "Add to Bookmark"
 msgstr "加入收藏"
 
-#: inc/favorite.php:46
+#: inc/favorite.php:45
 msgid "%d user bookmarked"
 msgid_plural "%d users bookmarked"
 msgstr[0] "%d个用户已收藏"
 msgstr[1] "%d个用户已收藏"
 
-#: inc/favorite.php:157
+#: inc/favorite.php:152
 msgid "Unfollowing"
 msgstr "取消关注"
 
-#: inc/favorite.php:163
+#: inc/favorite.php:158
 msgid "Following"
 msgstr "加关注"
 
@@ -650,7 +655,7 @@ msgid "Current Password"
 msgstr "当前密码"
 
 #: inc/member.php:857
-#: page-settings.php:40
+#: page-settings.php:39
 msgid "Change Password"
 msgstr "修改密码"
 
@@ -772,25 +777,25 @@ msgstr "你还未关注任何用户呢。"
 msgid "%d following in total."
 msgstr "共关注%d个用户"
 
-#: page-new-topic.php:28
+#: page-new-topic.php:29
 msgid "You can press <kbd>M</kbd> to popup the Markdown syntax cheatsheet."
 msgstr "请按 <kbd>M</kbd> 键弹出 Markdown 语法速查表"
 
-#: page-planes.php:16
+#: page-planes.php:18
 msgid "%d node now and growing."
 msgid_plural "%d nodes now and growing."
 msgstr[0] "现有%d个节点，节点数量增加中。"
 msgstr[1] "现有%d个节点，节点数量增加中。"
 
-#: page-settings.php:29
+#: page-settings.php:28
 msgid "Avatar"
 msgstr "头像"
 
-#: page-settings.php:33
+#: page-settings.php:32
 msgid "Your avatar is hosted by Gravatar"
 msgstr "头像系统由 Gravatar 提供"
 
-#: page-settings.php:34
+#: page-settings.php:33
 msgid "Change Avatar"
 msgstr "更改头像"
 
@@ -848,20 +853,23 @@ msgstr "已注册用户请%s"
 msgid "v2press"
 msgstr "v2press"
 
-#. #-#-#-#-#  v2press.pot (v2press 0.0.1)  #-#-#-#-#
+#. #-#-#-#-#  v2press.pot (v2press 0.0.2)  #-#-#-#-#
 #. Theme URI of the plugin/theme
-#. #-#-#-#-#  v2press.pot (v2press 0.0.1)  #-#-#-#-#
+#. #-#-#-#-#  v2press.pot (v2press 0.0.2)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://about.ac/"
 msgstr "http://about.ac/"
 
 #. Description of the plugin/theme
-msgid "The theme kit for v2press."
-msgstr "The theme kit for v2press."
+msgid "Turn your WordPress into a light and clean forum."
+msgstr "把 WordPress 变成一个轻量级、干净的论坛。"
 
 #. Author of the plugin/theme
 msgid "Andor Chen"
 msgstr "Andor Chen"
+
+#~ msgid "The theme kit for v2press."
+#~ msgstr "The theme kit for v2press."
 
 #~ msgid "Reply <span>&darr;</span>"
 #~ msgstr "回复 <span>&darr;</span>"

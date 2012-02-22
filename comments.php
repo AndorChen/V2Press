@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying Comments.
+ * Comments template.
  *
  * @since 0.0.1
  */
@@ -35,7 +35,7 @@ endif;
 	<?php endif; ?>
 </section>
 
-<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+<?php elseif ( !comments_open() && !is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 <section id="comments-closed" class="box">
 	<p class="inner center xlarge fade"><?php _e( 'Reply closed.', 'v2press' ); ?></p>
 </section>

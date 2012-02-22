@@ -7,7 +7,6 @@
  * @since 0.0.2
  */
 
-// Weird auth_redirect behaviour hack
 if ( !is_user_logged_in() )
   auth_redirect();
 

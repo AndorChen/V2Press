@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is single topic page.
+ * Single topic template.
  *
  * @since 0.0.1
  */
@@ -29,6 +29,7 @@ get_header(); ?>
         </section>
 
         <?php comments_template(); ?>
+
       </div><!--END #main-->
       <?php get_sidebar(); ?>
 

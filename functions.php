@@ -1,6 +1,5 @@
 <?php
 
-define( 'VP_VERSION', '0.0.2' );
 define( 'VP_INCLUDE_PATH', get_stylesheet_directory() . '/inc' );
 define( 'VP_LIBS_PATH', get_stylesheet_directory() . '/libs' );
 
@@ -8,28 +7,23 @@ define( 'VP_LIBS_PATH', get_stylesheet_directory() . '/libs' );
  * Load extra functions in.
  *
  */
-$includes = array(
-  'custom-hooks',
-  'custom-options',
-  'custom-template-tags',
-  'custom-category',
-  'member',
-  'favorite',
-  'custom-page',
-  'custom-comment',
-  'custom-post',
-  'custom-user',
-  'theme-options',
-  'seo',
-  'notifications'
-  );
-foreach ( $includes as $include ) {
-  include( VP_INCLUDE_PATH . '/' . $include . '.php' );
+$includes = glob( VP_INCLUDE_PATH . '/*.php' );
+// In case you don't need to include a file in /inc,
+// just enter the file name without extension
+$excludes = array();
+if ( is_array( $includes ) && 0 < count( $includes ) ) {
+  foreach ( $includes as $include ) {
+    $info = pathinfo( $include );
+    $name = basename( $include, '.' . $info['extension'] );
+    
+    if ( !in_array( $name, $excludes ) )
+      include( $include );
+  }
 }
 
 /**
  * V2Press activation.
- * Make sure these codes will only excute once.
+ * Make sure these codes will only excute once on activation.
  *
  * @since 0.0.1
  */
@@ -56,8 +50,7 @@ function vp_activation_hook( $function ) {
 }
 
 /**
- * V2Press setup
- * Setup many things after this theme is setupped.
+ * Setup many things after V2Press is setupped.
  *
  * @since 0.0.1
  */
@@ -71,7 +64,20 @@ function vp_theme_setup() {
 add_action( 'after_setup_theme', 'vp_theme_setup' );
 
 /**
- * Add JavaScript files to footer
+ * Add file modification time to the style.css.
+ *
+ * @since 0.0.2
+ */
+function vp_filter_stylesheet_uri( $stylesheet_uri ) {
+  $style = get_stylesheet_directory() . '/style.css';
+  $mtime = filemtime( $style );
+  $stylesheet_uri .= '?ver=' . $mtime;
+  return $stylesheet_uri;
+}
+add_filter( 'stylesheet_uri', 'vp_filter_stylesheet_uri' );
+
+/**
+ * Enqueue JavaScript files to footer.
  *
  * @since 0.0.1
  */
@@ -90,15 +96,15 @@ function vp_enqueue_scripts(){
 add_action('wp_enqueue_scripts', 'vp_enqueue_scripts');
 
 /**
- * Disable the toolbar at frontend
+ * Disable the toolbar at frontend.
  *
  * @since 0.0.1
  */
-if ( !is_admin() )
-  show_admin_bar(false);
+if ( defined( 'WP_DEBUG' ) && true != WP_DEBUG && !is_admin() )
+  show_admin_bar( false );
 
 /**
- * Prevent none administrator user from admin area.
+ * Prevent none administrator user from access admin area.
  *
  * @since 0.0.1
  */

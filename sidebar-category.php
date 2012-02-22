@@ -1,4 +1,5 @@
 <?php
+// Display sidebar node description in single and category page.
 if ( is_single() ) {
   $post_id = get_the_ID();
   $cats = get_the_category( $post_id );

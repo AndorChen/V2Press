@@ -6,7 +6,7 @@
     
   <link rel="icon" href="<?php bloginfo( 'template_url' ); ?>/images/favicon.ico" />
   <link rel="shortcut icon" href="<?php bloginfo( 'template_url' ); ?>/images/favicon.ico" />
-  <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>?ver=0.0.1" media="all" />
+  <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="all" />
   
   <?php vp_feed_link(); ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -46,7 +46,7 @@
           <?php endif; ?>
           <li><a href="<?php echo wp_logout_url( vp_current_url() ); ?>" title="<?php _ex( 'Signout', 'menu', 'v2press' ); ?>"><?php _ex( 'Signout', 'menu', 'v2press' ); ?></a></li>
         </ul>
-      <?php endif; // END if is_user_logged_in ?>
+      <?php endif; // END if is_user_logged_in() ?>
       </nav>
       
       <?php get_search_form(); ?>
