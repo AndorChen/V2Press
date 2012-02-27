@@ -98,8 +98,8 @@ function vp_category_save_custom_field( $term_id ) {
 			}
 		}
 
+    vp_update_section_option( $_POST['category_meta']['vp_category_section'], $t_id );
 		update_option( "v2press_category_$t_id", $term_meta );
-		vp_update_section_option( $_POST['category_meta']['vp_category_section'], $t_id );
 	}
 }
 add_action( 'create_category', 'vp_category_save_custom_field', 10, 2 );
@@ -183,13 +183,15 @@ function vp_section_dropdown_list() {
   $output .= '<option value="-1">' . __( 'None' ) . '</option>';
 
   if ( !empty( $sections ) ) {
-    $term_id = $_GET['tag_ID'];
-    $options = get_option( "v2press_category_$term_id" );
+    if ( isset( $_GET['tag_ID'] ) ) {
+      $term_id = $_GET['tag_ID'];
+      $options = get_option( "v2press_category_$term_id" );
 
-    if ( is_array( $options ) && array_key_exists( 'vp_category_section', $options ) )
-      $belong_to = $options['vp_category_section'];
-    else
+      if ( is_array( $options ) && array_key_exists( 'vp_category_section', $options ) )
+        $belong_to = $options['vp_category_section'];
+    } else {
       $belong_to = '';
+    }
 
     foreach ( $sections as $sec ) {
       $output .= '<option value="' . $sec . '"';
@@ -212,6 +214,21 @@ function vp_section_dropdown_list() {
  * @param int $cat_id The category ID.
  */
 function vp_update_section_option( $sec, $cat_id ) {
+  // delete from old section
+  $old_options = get_option( "v2press_category_{$cat_id}" );
+  if ( is_array( $$old_options ) && array_key_exists( 'vp_category_section', $old_options ) )
+    $old_sec = $old_options['vp_category_section'];
+  else
+    $old_sec = '';
+
+  if ( !empty( $old_sec ) && $sec != $old_sec ) {
+    $old_sec_list = get_option( "v2press_section_{$old_sec}" );
+    if ( !is_array( $old_sec_list ) ) $old_sec_list = array();
+    $old_sec_list = array_diff( $old_sec_list, array( $cat_id ) );
+    update_option( "v2press_section_{$old_sec}", $old_sec_list );
+  }
+  
+  // update new section option
   $option_name = "v2press_section_$sec";
   $cats = get_option( $option_name );
   if ( !is_array( $cats ) || empty( $cats ) )
