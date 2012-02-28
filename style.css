@@ -448,6 +448,9 @@ a.notification-delete:hover, a.notification-delete:active{
   top: 10px;
   right: 10px;
 }
+.topic-content, .comment-content {
+  word-wrap: break-word; /* Force long word or URL line break */
+}
 .topic-content h1, .topic-content h2, .topic-content h3,
 .comment-content h1, .comment-content h2, .comment-content h3 {
   font-size: 18px;
