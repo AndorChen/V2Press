@@ -130,7 +130,7 @@ function vp_get_category_meta( $meta='' ) {
 
   switch( $meta ) {
     case 'logo':
-    defalt:
+    default:
       $image =  $option['vp_category_logo_url'];
       if ( empty( $image ) )
         $image = 'default-node-logo.png';
