@@ -833,7 +833,7 @@ li.comment {
   background: #fff url("images/bg-footer.png") no-repeat right center;
 }
 #footer-navi {
-  margin: 10px 0;
+  padding: 10px 0;
 }
 #footer-navi li {
   border-right: 1px solid #e2e2e2;
