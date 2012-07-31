@@ -1,4 +1,5 @@
-*.tmproj
+*.sublime-project
+*.sublime-workspace
 *.psd
 
 # OS related
