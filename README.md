@@ -6,6 +6,10 @@ V2Press 是一个 WordPress 主题，允许您使用 WordPress 架构一个简�
 
 -------
 
+## 重要声明
+
+V2Press 已经停止开发，使用风险自负。我也不会解答任何问题，修正任何 bug。
+
 ## 特性说明
 
 -   充分利用 WordPress 的特点
