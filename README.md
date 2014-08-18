@@ -29,8 +29,6 @@ V2Press 已经停止开发，使用风险自负。我也不会解答任何问题
 
 Andor Chen [http://about.ac](http://about.ac)
 
-Email: <andor.chen.27@gmail.com>
-
 Twitter: [@Andor_Chen](https://twitter.com/#!/Andor_Chen)
 
 ## 发布协议
